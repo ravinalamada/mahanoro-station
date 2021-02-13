@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 const cityInitialisation = ['Antananarivo', 'Toamasina', 'Vatomandry', 'Moramanga']
 
 function city(state = [], action) {
+  console.log(state);
 	switch (action.type) {
 		case 'GET_CITY':
 			return action.value;

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Item, Title, Logo} from './styles/cityItems';
-
 export default function CityItems({children, ...restProps}) {
   return (
     <Item {...restProps}>

@@ -3,16 +3,22 @@ import {connect} from 'react-redux';
 import {getCity} from '../actions';
 import {Link} from 'react-router-dom'
 
-function items({destinations}) {
+function items({city}) {
+  console.log(city);
+
+  useEffect(() => {
+  getCity
+  },);
+
   return (
     <>
-    {destinations && destinations.map(destination => (
+    {/* {destinations && destinations.map(destination => (
       <Link to='' key={destination}>
         {destination}
-      </Link>
-    ))}
+      </Link> */}
+   looooo
   </>
   )
 }
 
-export default connect((state) => ({destinations: state.destination}))(items)
+export default connect((state) => ({city: state.city}), ({getCity}))(items)
