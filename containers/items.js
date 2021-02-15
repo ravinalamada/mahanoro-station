@@ -16,7 +16,7 @@ function items({city}) {
       <Link to='' key={destination}>
         {destination}
       </Link> */}
-   looooo
+
   </>
   )
 }

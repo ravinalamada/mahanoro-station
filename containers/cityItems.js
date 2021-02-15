@@ -6,16 +6,22 @@ import { Link } from 'react-router-dom';
 function cityItemsContainer({destinations}) {
 
   return (
-    <CityList>
-          {destinations && destinations.map(destination => (
-            <CityItems key={destination}>
-              <Link to={`/cityItemsContainer/${destination}`} >
-                <CityItems.Title>{destination}</CityItems.Title>
-                <CityItems.Logo>logo</CityItems.Logo>
-              </Link>
-            </CityItems>
-        ))}
-    </CityList>
+    <>
+      <header>
+        <h2>Where are you going?</h2>
+        <span>Logo</span>
+      </header>
+      <CityList>
+            {destinations && destinations.map(destination => (
+              <CityItems key={destination}>
+                <Link to={`/cityItemsContainer/${destination}`} >
+                  <CityItems.Title>{destination}</CityItems.Title>
+                  <CityItems.Logo>logo</CityItems.Logo>
+                </Link>
+              </CityItems>
+          ))}
+      </CityList>
+  </>
   )
 }
 

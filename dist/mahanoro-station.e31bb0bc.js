@@ -38265,7 +38265,12 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const Container = _styledComponents.default.div``;
+const Container = _styledComponents.default.div`
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center
+`;
 exports.Container = Container;
 const Frame = _styledComponents.default.div``;
 exports.Frame = Frame;
@@ -38535,11 +38540,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function cityItemsContainer({
   destinations
 }) {
-  return /*#__PURE__*/_react.default.createElement(_components.CityList, null, destinations && destinations.map(destination => /*#__PURE__*/_react.default.createElement(_components.CityItems, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement("h2", null, "Where are you going?"), /*#__PURE__*/_react.default.createElement("span", null, "Logo")), /*#__PURE__*/_react.default.createElement(_components.CityList, null, destinations && destinations.map(destination => /*#__PURE__*/_react.default.createElement(_components.CityItems, {
     key: destination
   }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: `/cityItemsContainer/${destination}`
-  }, /*#__PURE__*/_react.default.createElement(_components.CityItems.Title, null, destination), /*#__PURE__*/_react.default.createElement(_components.CityItems.Logo, null, "logo")))));
+  }, /*#__PURE__*/_react.default.createElement(_components.CityItems.Title, null, destination), /*#__PURE__*/_react.default.createElement(_components.CityItems.Logo, null, "logo"))))));
 }
 
 var _default = (0, _reactRedux.connect)(state => ({
@@ -38604,16 +38609,40 @@ function TripsContainer({
   const {
     destination
   } = (0, _reactRouterDom.useParams)();
-  const filterCityByName = city.filter(city => city.destination === destination);
-  console.log(filterCityByName);
+  const findCityByName = city.find(city => city.destination === destination);
+  console.log(findCityByName);
+  const dateData = findCityByName && findCityByName.departureTime; // Get the day name
+
+  var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  var d = new Date(dateData);
+  var dayName1 = days[d.getDay()];
+  var dayName2 = days[d.getDay() + 1];
+  var dayName3 = days[d.getDay() + 2]; // console.log('daaeaeae', dayName);
+
+  var date = new Date(findCityByName && dateData * 1000); // Hours part from the timestamp
+
+  var hours = date.getHours(); // Minutes part from the timestamp
+
+  var minutes = "0" + date.getMinutes(); // Get full date
+
+  var fullDate = new Date().toLocaleDateString("en-US");
+  var fullDate2 = new Date().toLocaleDateString("en-US");
+  console.log(fullDate2); // Get seats
+
+  const seatsData = findCityByName && findCityByName.seats;
+  const filteredAvailableSeats = findCityByName && seatsData.filter(seat => seat.isAvailable === true);
+  const seats = findCityByName && filteredAvailableSeats.length; // Get cityData
+
   (0, _react.useEffect)(() => {
     getCity();
   }, []);
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, filterCityByName.map(city => /*#__PURE__*/_react.default.createElement(_components.Trips, {
-    key: city.id
-  }, /*#__PURE__*/_react.default.createElement(_components.Trips.Frame, null, /*#__PURE__*/_react.default.createElement(_components.Trips.Logo, null)), /*#__PURE__*/_react.default.createElement(_components.Trips.Frame, null, /*#__PURE__*/_react.default.createElement(_components.Trips.Day, null), /*#__PURE__*/_react.default.createElement(_components.Trips.Hours, null)), /*#__PURE__*/_react.default.createElement(_components.Trips.Frame, null, /*#__PURE__*/_react.default.createElement(_components.Trips.Date, null), /*#__PURE__*/_react.default.createElement(_components.Trips.Seats, null)), /*#__PURE__*/_react.default.createElement(_components.Trips.Frame, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: `/tripsContainer/${city.id}`
-  }, /*#__PURE__*/_react.default.createElement(_components.Trips.Buttons, null, "Book a seat"))))));
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_components.Trips, null, /*#__PURE__*/_react.default.createElement(_components.Trips.Frame, null, /*#__PURE__*/_react.default.createElement(_components.Trips.Logo, null)), /*#__PURE__*/_react.default.createElement(_components.Trips.Frame, null, /*#__PURE__*/_react.default.createElement(_components.Trips.Day, null, dayName1), /*#__PURE__*/_react.default.createElement(_components.Trips.Hours, null, hours, ":", minutes)), /*#__PURE__*/_react.default.createElement(_components.Trips.Frame, null, /*#__PURE__*/_react.default.createElement(_components.Trips.Date, null, fullDate), /*#__PURE__*/_react.default.createElement(_components.Trips.Seats, null, seats, " seats left")), /*#__PURE__*/_react.default.createElement(_components.Trips.Frame, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: `/tripsContainer/${findCityByName && findCityByName.id}`
+  }, /*#__PURE__*/_react.default.createElement(_components.Trips.Buttons, null, "Book a seat")))), /*#__PURE__*/_react.default.createElement(_components.Trips, null, /*#__PURE__*/_react.default.createElement(_components.Trips.Frame, null, /*#__PURE__*/_react.default.createElement(_components.Trips.Logo, null)), /*#__PURE__*/_react.default.createElement(_components.Trips.Frame, null, /*#__PURE__*/_react.default.createElement(_components.Trips.Day, null, dayName2), /*#__PURE__*/_react.default.createElement(_components.Trips.Hours, null, hours, ":", minutes)), /*#__PURE__*/_react.default.createElement(_components.Trips.Frame, null, /*#__PURE__*/_react.default.createElement(_components.Trips.Date, null, fullDate), /*#__PURE__*/_react.default.createElement(_components.Trips.Seats, null, seats, " seats left")), /*#__PURE__*/_react.default.createElement(_components.Trips.Frame, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: `/tripsContainer/${findCityByName && findCityByName.id}`
+  }, /*#__PURE__*/_react.default.createElement(_components.Trips.Buttons, null, "Book a seat")))), /*#__PURE__*/_react.default.createElement(_components.Trips, null, /*#__PURE__*/_react.default.createElement(_components.Trips.Frame, null, /*#__PURE__*/_react.default.createElement(_components.Trips.Logo, null)), /*#__PURE__*/_react.default.createElement(_components.Trips.Frame, null, /*#__PURE__*/_react.default.createElement(_components.Trips.Day, null, dayName3), /*#__PURE__*/_react.default.createElement(_components.Trips.Hours, null, hours, ":", minutes)), /*#__PURE__*/_react.default.createElement(_components.Trips.Frame, null, /*#__PURE__*/_react.default.createElement(_components.Trips.Date, null, fullDate), /*#__PURE__*/_react.default.createElement(_components.Trips.Seats, null, seats, " seats left")), /*#__PURE__*/_react.default.createElement(_components.Trips.Frame, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: `/tripsContainer/${findCityByName && findCityByName.id}`
+  }, /*#__PURE__*/_react.default.createElement(_components.Trips.Buttons, null, "Book a seat")))));
 }
 
 var _default = (0, _reactRedux.connect)(state => ({
@@ -38694,7 +38723,7 @@ function items({
   (0, _react.useEffect)(() => {
     _actions.getCity;
   });
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, "looooo");
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null);
 }
 
 var _default = (0, _reactRedux.connect)(state => ({
@@ -38906,7 +38935,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55029" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63280" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
