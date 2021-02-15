@@ -18,10 +18,42 @@ function destination(state=cityInitialisation, action) {
     default:
       return state;
   }
+}
 
+function cartItems(state=[], action) {
+  console.log('sate',state);
+  switch (action.type) {
+    case 'SET_CART_ITEMS':
+      return [...state, action.value]
+      case 'REMOVE_CART_ITEMS':
+        return state.filter(cartItem => cartItem.id !== action.value)
+    default:
+      return state;
+  }
+}
+
+function totalPrice(state=0, action) {
+  switch (action.type) {
+    case 'SET_TOTAL_PRICE':
+      return action.value;
+    default:
+      return state;
+  }
+}
+
+function Modal(state=false, action) {
+  switch (action.type) {
+    case 'DISPLAY_MODALY':
+      return !state;
+    default:
+      return state;
+  }
 }
 
 export const reducers = combineReducers({
 	city,
   destination,
+  totalPrice,
+  cartItems,
+  Modal,
 });

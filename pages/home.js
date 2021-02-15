@@ -2,14 +2,15 @@ import React from 'react';
 import CityItemsContainer from '../containers/cityItems';
 import TripsContainer from '../containers/trips';
 import CityContainer from '../containers/city';
+import PannelsContainer from '../containers/pannelContainer';
 import { Switch, Route, Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 // import TripsContainer from '../containers/city';
-import Items from '../containers/items'
+import PannelContainer from '../containers/pannelContainer';
 
-export default function home() {
+function home({Modal}) {
   return (
     <>
-    <Items />
     <Switch>
       <Route exact path="/">
         <CityItemsContainer></CityItemsContainer>
@@ -21,6 +22,16 @@ export default function home() {
          <CityContainer />
       </Route>
     </Switch>
+    {/* <PannelsContainer /> */}
+    {Modal && <PannelContainer />}
   </>
   )
 }
+
+function mapStateToProps(state){
+  return {
+    Modal: state.Modal,
+  }
+}
+
+export default connect(mapStateToProps)(home)

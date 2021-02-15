@@ -17,3 +17,28 @@ export function destination(city) {
     value: city
   }
 }
+
+export function setTotalPrice(price) {
+  return {
+    type: 'SET_TOTAL_PRICE',
+    value: price
+  }
+}
+
+export function addToCart(city) {
+  return {
+    type: 'SET_CART_ITEMS',
+    value: city
+  }
+}
+export function displayModal() {
+  return {
+    type: 'DISPLAY_MODALY',
+  }
+}
+export function removeCartItems(seatId) {
+  return {
+    type: 'REMOVE_CART_ITEMS',
+    value: seatId
+  }
+}
