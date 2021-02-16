@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 import { getCity } from '../actions'
 import { useParams, Link } from 'react-router-dom';
-import { Trips} from '../components';
+import { Trips, Buttons} from '../components';
 
 function TripsContainer({city, getCity}) {
 
@@ -51,7 +51,7 @@ function TripsContainer({city, getCity}) {
           </Trips.Frame>
           <Trips.Frame>
             <Link to={`/tripsContainer/${findCityByName && findCityByName.id}`}>
-              <Trips.Buttons>Book a seat</Trips.Buttons>
+              <Buttons>Book a seat</Buttons>
             </Link>
           </Trips.Frame>
         </Trips>

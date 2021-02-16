@@ -38158,7 +38158,196 @@ exports.ServerStyleSheet = Ue;
 "production" !== "development" && "undefined" != typeof navigator && "ReactNative" === navigator.product && console.warn("It looks like you've imported 'styled-components' on React Native.\nPerhaps you're looking to import 'styled-components/native'?\nRead more about this at https://www.styled-components.com/docs/basics#react-native"), "production" !== "development" && "test" !== "development" && (window["__styled-components-init__"] = window["__styled-components-init__"] || 0, 1 === window["__styled-components-init__"] && console.warn("It looks like there are several instances of 'styled-components' initialized in this application. This may cause dynamic styles to not render properly, errors during the rehydration process, a missing theme prop, and makes your application bigger without good reason.\n\nSee https://s-c.sh/2BAXzed for more info."), window["__styled-components-init__"] += 1);
 var _default = qe;
 exports.default = _default;
-},{"react-is":"node_modules/react-is/index.js","react":"node_modules/react/index.js","shallowequal":"node_modules/shallowequal/index.js","@emotion/stylis":"node_modules/@emotion/stylis/dist/stylis.browser.esm.js","@emotion/unitless":"node_modules/@emotion/unitless/dist/unitless.browser.esm.js","@emotion/is-prop-valid":"node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js","hoist-non-react-statics":"node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js","process":"../../AppData/Roaming/npm/node_modules/parcel-bundler/node_modules/process/browser.js"}],"components/cityList/styles/cityList.js":[function(require,module,exports) {
+},{"react-is":"node_modules/react-is/index.js","react":"node_modules/react/index.js","shallowequal":"node_modules/shallowequal/index.js","@emotion/stylis":"node_modules/@emotion/stylis/dist/stylis.browser.esm.js","@emotion/unitless":"node_modules/@emotion/unitless/dist/unitless.browser.esm.js","@emotion/is-prop-valid":"node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js","hoist-non-react-statics":"node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js","process":"../../AppData/Roaming/npm/node_modules/parcel-bundler/node_modules/process/browser.js"}],"components/header/styles/header.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Logo = exports.Text = exports.Title = exports.Wrapper = exports.Container = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const Container = _styledComponents.default.header`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0F0E17;
+  padding-left: 20px;
+  padding-right: 20px;
+`;
+exports.Container = Container;
+const Wrapper = _styledComponents.default.div`
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: baseline;
+  gap: 20px;
+  justify-content: flex-start;
+`;
+exports.Wrapper = Wrapper;
+const Title = _styledComponents.default.h1`
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 43px;
+  color: #FFFFFE;
+`;
+exports.Title = Title;
+const Text = _styledComponents.default.p`
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  color: #A7A9BE;
+`;
+exports.Text = Text;
+const Logo = _styledComponents.default.span`
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+`;
+exports.Logo = Logo;
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/header/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Header;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _header = require("./styles/header");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Header({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_header.Container, restProps, children);
+}
+
+Header.Wrapper = function modalWrapper({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_header.Wrapper, restProps, children);
+};
+
+Header.Title = function modalTitle({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_header.Title, restProps, children);
+};
+
+Header.Logo = function modalLogo({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_header.Logo, restProps, children);
+};
+
+Header.Text = function modalText({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_header.Text, restProps, children);
+};
+},{"react":"node_modules/react/index.js","./styles/header":"components/header/styles/header.js"}],"components/masthead/styles/masthead.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Logo = exports.Title = exports.Wrapper = exports.Container = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const Container = _styledComponents.default.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+exports.Container = Container;
+const Wrapper = _styledComponents.default.div`
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+  align-items: center;
+`;
+exports.Wrapper = Wrapper;
+const Title = _styledComponents.default.h2`
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 36px;
+  color: #000000;
+  margin-top: 144px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  span {
+    color: #E53170;
+    font-weight: normal;
+  }
+`;
+exports.Title = Title;
+const Logo = _styledComponents.default.span`
+  svg {
+    width: 72px;
+    height: 72px
+  }
+`;
+exports.Logo = Logo;
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/masthead/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Masthead;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _masthead = require("./styles/masthead");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Masthead({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_masthead.Container, restProps, children);
+}
+
+Masthead.Wrapper = function modalWrapper({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_masthead.Wrapper, restProps, children);
+};
+
+Masthead.Title = function modalTitle({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_masthead.Title, restProps, children);
+};
+
+Masthead.Logo = function modalLogo({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_masthead.Logo, restProps, children);
+};
+},{"react":"node_modules/react/index.js","./styles/masthead":"components/masthead/styles/masthead.js"}],"components/cityList/styles/cityList.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38173,9 +38362,20 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const Container = _styledComponents.default.ul`
   margin: 0;
   padding: 0;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 82px;
 
-  @media(max-width: 1000px) {
-    margin-top: 32px;
+  @media(min-width: 600px) {
+    max-width: max-content;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 82px;
+    column-gap: 82px;
   }
 `;
 exports.Container = Container;
@@ -38211,11 +38411,33 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const Item = _styledComponents.default.li``;
+const Item = _styledComponents.default.li`
+  list-style: none;
+  flex-basis: 50%;
+  background: #0F0E17;
+
+  a {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 20px;
+  }
+`;
 exports.Item = Item;
-const Title = _styledComponents.default.h2``;
+const Title = _styledComponents.default.h2`
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 43px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 20px;
+`;
 exports.Title = Title;
-const Logo = _styledComponents.default.button``;
+const Logo = _styledComponents.default.button`
+  background-color: transparent;
+  border-color: transparent;
+  padding-left: 20px;
+`;
 exports.Logo = Logo;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/cityItems/index.js":[function(require,module,exports) {
 "use strict";
@@ -38411,7 +38633,7 @@ const Logo = _styledComponents.default.span``;
 exports.Logo = Logo;
 const Buttons = _styledComponents.default.button`
   border-color: transparent;
-  background-color:linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(360deg, #FFAC33 117.76%, rgba(255, 255, 255, 0) 187.45%);
+  background:linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(360deg, #FFAC33 117.76%, rgba(255, 255, 255, 0) 187.45%);
 `;
 exports.Buttons = Buttons;
 const Name = _styledComponents.default.p``;
@@ -38533,11 +38755,223 @@ City.EstimatedDuration = function CityEstimatedDuration({
 }) {
   return /*#__PURE__*/_react.default.createElement(_City.EstimatedDuration, restProps, children);
 };
-},{"react":"node_modules/react/index.js","./styles/City":"components/city/styles/City.js"}],"components/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./styles/City":"components/city/styles/City.js"}],"components/buttons/styles/buttons.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
+});
+exports.Container = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const Container = _styledComponents.default.button`
+  background: #E53170;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 43px;
+  color: #FFFFFF;
+  padding-top: 5px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 5px;
+  border-color: transparent;
+ `;
+exports.Container = Container;
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/buttons/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Buttons;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _buttons = require("./styles/buttons");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Buttons({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_buttons.Container, restProps, children);
+}
+},{"react":"node_modules/react/index.js","./styles/buttons":"components/buttons/styles/buttons.js"}],"components/modal/styles/modal.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Logo = exports.CloseButton = exports.Text = exports.Title = exports.Wrapper = exports.Frame = exports.Container = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const Container = _styledComponents.default.section`
+  background: rgba(255, 255, 255, 0.8);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+`;
+exports.Container = Container;
+const Frame = _styledComponents.default.div`
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 30px;
+  align-items: baseline;
+`;
+exports.Frame = Frame;
+const Wrapper = _styledComponents.default.div`
+  position: fixed;
+  background: #FFFFFF;
+  border: 5px solid #E53170;
+  box-sizing: border-box;
+  width: 70%;
+  height: 70%;
+  top: 10%;
+  bottom: 10%;
+  left: 20%;
+  right: 10%;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+exports.Wrapper = Wrapper;
+const Title = _styledComponents.default.h2`
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 38px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000000;
+
+  @media(max-width: 600px) {
+    font-size: 25px;
+  }
+`;
+exports.Title = Title;
+const Text = _styledComponents.default.p`
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: #000000;
+  width: 300px;
+
+  @media(max-width: 600px) {
+    font-size: 16px;
+  }
+`;
+exports.Text = Text;
+const CloseButton = _styledComponents.default.button`
+  width: 100%;
+  text-align: right;
+  font-size: 28px;
+  color: #3E4347;
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+`;
+exports.CloseButton = CloseButton;
+const Logo = _styledComponents.default.button`
+ width: 24px;
+ height: 24px;
+ border-color: transparent;
+ background-color: transparent;
+   svg {
+    width: 24px;
+    height: 24px;
+   }
+`;
+exports.Logo = Logo;
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/modal/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = ShowModal;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _modal = require("./styles/modal");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function ShowModal({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_modal.Container, restProps, children);
+}
+
+ShowModal.Wrapper = function modalWrapper({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_modal.Wrapper, restProps, children);
+};
+
+ShowModal.Frame = function modalFrame({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_modal.Frame, restProps, children);
+};
+
+ShowModal.Logo = function modalLogo({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_modal.Logo, restProps, children);
+};
+
+ShowModal.Title = function modalTitle({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_modal.Title, restProps, children);
+};
+
+ShowModal.CloseButton = function modalCloseButton({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_modal.CloseButton, restProps, children);
+};
+
+ShowModal.Text = function modalText({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_modal.Text, restProps, children);
+};
+},{"react":"node_modules/react/index.js","./styles/modal":"components/modal/styles/modal.js"}],"components/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "Header", {
+  enumerable: true,
+  get: function () {
+    return _header.default;
+  }
+});
+Object.defineProperty(exports, "Masthead", {
+  enumerable: true,
+  get: function () {
+    return _masthead.default;
+  }
 });
 Object.defineProperty(exports, "CityList", {
   enumerable: true,
@@ -38563,6 +38997,22 @@ Object.defineProperty(exports, "City", {
     return _city.default;
   }
 });
+Object.defineProperty(exports, "Buttons", {
+  enumerable: true,
+  get: function () {
+    return _buttons.default;
+  }
+});
+Object.defineProperty(exports, "ShowModal", {
+  enumerable: true,
+  get: function () {
+    return _modal.default;
+  }
+});
+
+var _header = _interopRequireDefault(require("./header"));
+
+var _masthead = _interopRequireDefault(require("./masthead"));
 
 var _cityList = _interopRequireDefault(require("./cityList"));
 
@@ -38572,8 +39022,12 @@ var _trips = _interopRequireDefault(require("./trips"));
 
 var _city = _interopRequireDefault(require("./city"));
 
+var _buttons = _interopRequireDefault(require("./buttons"));
+
+var _modal = _interopRequireDefault(require("./modal"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./cityList":"components/cityList/index.js","./cityItems":"components/cityItems/index.js","./trips":"components/trips/index.js","./city":"components/city/index.js"}],"containers/cityItems.js":[function(require,module,exports) {
+},{"./header":"components/header/index.js","./masthead":"components/masthead/index.js","./cityList":"components/cityList/index.js","./cityItems":"components/cityItems/index.js","./trips":"components/trips/index.js","./city":"components/city/index.js","./buttons":"components/buttons/index.js","./modal":"components/modal/index.js"}],"containers/cityItems.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38594,11 +39048,88 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function cityItemsContainer({
   destinations
 }) {
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement("h2", null, "Where are you going?"), /*#__PURE__*/_react.default.createElement("span", null, "Logo")), /*#__PURE__*/_react.default.createElement(_components.CityList, null, destinations && destinations.map(destination => /*#__PURE__*/_react.default.createElement(_components.CityItems, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_components.Masthead, null, /*#__PURE__*/_react.default.createElement(_components.Masthead.Wrapper, null, /*#__PURE__*/_react.default.createElement(_components.Masthead.Title, null, "Where are you going?"), /*#__PURE__*/_react.default.createElement(_components.Masthead.Logo, null, /*#__PURE__*/_react.default.createElement("svg", {
+    width: "128",
+    height: "128",
+    viewBox: "0 0 128 128",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/_react.default.createElement("g", {
+    clipPath: "url(#clip0)"
+  }, /*#__PURE__*/_react.default.createElement("path", {
+    d: "M117.13 87.29C117.13 94.64 115.07 100.59 112.55 100.59C110.02 100.59 107.97 94.64 107.97 87.29C107.97 79.94 110.02 73.98 112.55 73.98C115.07 73.98 117.13 79.95 117.13 87.29Z",
+    fill: "#2F2F2F"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M110.56 99.28C110.56 99.28 111.78 101.23 113.1 101.89C116.09 103.38 120.25 102.83 122.75 99.43L121.41 91.33L112.95 92.94L110.56 99.28Z",
+    fill: "#2F2F2F"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M23.71 104.14C23.71 111.99 20.94 118.36 17.54 118.36C14.13 118.36 11.36 111.99 11.36 104.14C11.36 96.28 14.13 89.91 17.54 89.91C20.94 89.92 23.71 96.28 23.71 104.14Z",
+    fill: "#2F2F2F"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M14.85 116.97C14.85 116.97 16.49 119.06 18.29 119.76C22.32 121.35 27.92 120.76 31.29 117.14L29.48 108.48L18.08 110.2L14.85 116.97Z",
+    fill: "#2F2F2F"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M34.95 104.14C34.95 111.99 32.18 118.36 28.78 118.36C25.37 118.36 22.6 111.99 22.6 104.14C22.6 96.28 25.37 89.91 28.78 89.91C32.18 89.92 34.95 96.28 34.95 104.14Z",
+    fill: "#2F2F2F"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M90.78 104.14C90.78 111.99 88.01 118.36 84.61 118.36C81.2 118.36 78.43 111.99 78.43 104.14C78.43 96.28 81.2 89.91 84.61 89.91C88.01 89.92 90.78 96.28 90.78 104.14Z",
+    fill: "#2F2F2F"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M81.92 116.97C81.92 116.97 83.56 119.06 85.36 119.76C89.39 121.35 94.99 120.76 98.37 117.14L96.56 108.48L85.16 110.2L81.92 116.97Z",
+    fill: "#2F2F2F"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M114 12.21H17.31C7.28 12.21 0.160004 18.34 0.160004 27.36V91.7C0.160004 101.72 8.29 109.85 18.31 109.85H73.98C88.6 109.85 93.38 107.96 102.32 102.07C111.51 96.02 128 86.02 128 77.82V27.27C128 17.25 124.02 12.21 114 12.21Z",
+    fill: "#FCC21B"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M-0.380005 82.07H85.95V111.5H-0.380005V82.07Z",
+    fill: "#ED6C30"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M85.95 117.59L131.32 87.94V54.85L85.95 82.07V117.59Z",
+    fill: "#ED6C30"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M80.11 67.23C80.11 70.59 77.38 73.33 74.01 73.33H15.41C12.05 73.33 9.31998 70.59 9.31998 67.23V28.49C9.31998 25.13 12.05 22.39 15.41 22.39H74C77.37 22.39 80.1 25.13 80.1 28.49V67.23H80.11Z",
+    fill: "#40C0E7"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M6.60999 20.04H83.61V37.92H6.60999V20.04Z",
+    fill: "#2F2F2F"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M20.24 25.96H69.97V34.06H20.24V25.96Z",
+    fill: "white"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M108.42 48.97C108.42 51.57 106.9 54.53 104.91 55.66L97.5 59.87C94.76 61.41 92.37 60.04 92.37 56.67V29.25C92.37 25.89 94.77 23.16 97.5 23.16H104.91C106.9 23.16 108.42 25.27 108.42 27.85V48.97ZM120.34 26.78C120.34 24.81 119.61 23.21 118.67 23.21H115.33C114.17 23.21 113.17 25.12 113.17 27.46V46.52C113.17 48.86 114.17 50.16 115.33 49.43L118.67 47.39C119.61 46.81 120.34 44.77 120.34 42.8V26.78Z",
+    fill: "#40C0E7"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M16.08 100.82C19.8742 100.82 22.95 97.7487 22.95 93.96C22.95 90.1713 19.8742 87.1 16.08 87.1C12.2858 87.1 9.20999 90.1713 9.20999 93.96C9.20999 97.7487 12.2858 100.82 16.08 100.82Z",
+    fill: "white"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M79.13 93.96C79.13 97.75 76.05 100.82 72.25 100.82C68.47 100.82 65.39 97.75 65.39 93.96C65.39 90.16 68.46 87.1 72.25 87.1C76.05 87.1 79.13 90.16 79.13 93.96Z",
+    fill: "white"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M102.02 104.14C102.02 111.99 99.25 118.36 95.85 118.36C92.44 118.36 89.67 111.99 89.67 104.14C89.67 96.28 92.44 89.91 95.85 89.91C99.25 89.92 102.02 96.28 102.02 104.14Z",
+    fill: "#2F2F2F"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M125.46 87.29C125.46 94.64 123.41 100.59 120.88 100.59C118.35 100.59 116.3 94.64 116.3 87.29C116.3 79.94 118.35 73.98 120.88 73.98C123.42 73.98 125.46 79.95 125.46 87.29Z",
+    fill: "#2F2F2F"
+  })), /*#__PURE__*/_react.default.createElement("defs", null, /*#__PURE__*/_react.default.createElement("clipPath", {
+    id: "clip0"
+  }, /*#__PURE__*/_react.default.createElement("rect", {
+    width: "128",
+    height: "128",
+    fill: "white"
+  }))))))), /*#__PURE__*/_react.default.createElement(_components.CityList, null, destinations && destinations.map(destination => /*#__PURE__*/_react.default.createElement(_components.CityItems, {
     key: destination
   }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: `/cityItemsContainer/${destination}`
-  }, /*#__PURE__*/_react.default.createElement(_components.CityItems.Title, null, destination), /*#__PURE__*/_react.default.createElement(_components.CityItems.Logo, null, "logo"))))));
+  }, /*#__PURE__*/_react.default.createElement(_components.CityItems.Title, null, destination), /*#__PURE__*/_react.default.createElement(_components.CityItems.Logo, null, /*#__PURE__*/_react.default.createElement("svg", {
+    width: "34",
+    height: "36",
+    viewBox: "0 0 34 36",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/_react.default.createElement("path", {
+    d: "M22.6667 17.0526V5.68421L17 0L11.3333 5.68421V9.47368H0V36H34V17.0526H22.6667ZM7.55556 32.2105H3.77778V28.4211H7.55556V32.2105ZM7.55556 24.6316H3.77778V20.8421H7.55556V24.6316ZM7.55556 17.0526H3.77778V13.2632H7.55556V17.0526ZM18.8889 32.2105H15.1111V28.4211H18.8889V32.2105ZM18.8889 24.6316H15.1111V20.8421H18.8889V24.6316ZM18.8889 17.0526H15.1111V13.2632H18.8889V17.0526ZM18.8889 9.47368H15.1111V5.68421H18.8889V9.47368ZM30.2222 32.2105H26.4444V28.4211H30.2222V32.2105ZM30.2222 24.6316H26.4444V20.8421H30.2222V24.6316Z",
+    fill: "#FF8906"
+  }))))))));
 }
 
 var _default = (0, _reactRedux.connect)(state => ({
@@ -38618,6 +39149,7 @@ exports.setTotalPrice = setTotalPrice;
 exports.addToCart = addToCart;
 exports.displayModal = displayModal;
 exports.removeCartItems = removeCartItems;
+exports.setUserAccount = setUserAccount;
 
 // const API_DATA= ``;
 function getCity() {
@@ -38662,6 +39194,13 @@ function removeCartItems(seatId) {
   return {
     type: 'REMOVE_CART_ITEMS',
     value: seatId
+  };
+}
+
+function setUserAccount(userId) {
+  return {
+    type: 'SET_USER_ACCOUNT',
+    value: userId
   };
 }
 },{}],"containers/trips.js":[function(require,module,exports) {
@@ -38718,7 +39257,7 @@ function TripsContainer({
       key: city.id
     }, /*#__PURE__*/_react.default.createElement(_components.Trips.Frame, null, /*#__PURE__*/_react.default.createElement(_components.Trips.Logo, null)), /*#__PURE__*/_react.default.createElement(_components.Trips.Frame, null, /*#__PURE__*/_react.default.createElement(_components.Trips.Day, null, dayName), /*#__PURE__*/_react.default.createElement(_components.Trips.Hours, null, hours, ":", minutes)), /*#__PURE__*/_react.default.createElement(_components.Trips.Frame, null, /*#__PURE__*/_react.default.createElement(_components.Trips.Date, null, fullDate), /*#__PURE__*/_react.default.createElement(_components.Trips.Seats, null, availlableSeat.length, " seats left")), /*#__PURE__*/_react.default.createElement(_components.Trips.Frame, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
       to: `/tripsContainer/${findCityByName && findCityByName.id}`
-    }, /*#__PURE__*/_react.default.createElement(_components.Trips.Buttons, null, "Book a seat"))));
+    }, /*#__PURE__*/_react.default.createElement(_components.Buttons, null, "Book a seat"))));
   }));
 }
 
@@ -38747,12 +39286,11 @@ var _components = require("../components");
 
 var _actions = require("../actions");
 
-var _trips = require("../components/trips/styles/trips");
-
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+// import { Buttons } from '../components/trips/styles/trips';
 function CityContainer({
   city,
   getCity,
@@ -38785,29 +39323,120 @@ function CityContainer({
     }, 0);
     return setTotal(newTotal);
   }, [cartItems]);
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement("h2", null, "Book a seat to:"), /*#__PURE__*/_react.default.createElement("h2", null, findCityById && findCityById.destination)), /*#__PURE__*/_react.default.createElement(_components.City, null, /*#__PURE__*/_react.default.createElement(_components.City.Wrapper, null, seatData && seatData.map(seat => {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_components.Masthead, null, /*#__PURE__*/_react.default.createElement(_components.Masthead.Wrapper, null, /*#__PURE__*/_react.default.createElement(_components.Masthead.Title, null, "Book a seat to:", /*#__PURE__*/_react.default.createElement("span", null, findCityById && findCityById.destination)), /*#__PURE__*/_react.default.createElement(_components.Masthead.Logo, null, /*#__PURE__*/_react.default.createElement("svg", {
+    width: "118",
+    height: "118",
+    viewBox: "0 0 118 118",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/_react.default.createElement("g", {
+    "clip-path": "url(#clip0)"
+  }, /*#__PURE__*/_react.default.createElement("path", {
+    d: "M65.5556 19.8043C65.5556 23.4492 62.5957 26.4058 59 26.4058C55.4043 26.4058 52.4445 23.4492 52.4445 19.8043V6.60144C52.4445 2.95328 55.4043 0 59 0C62.5957 0 65.5556 2.95328 65.5556 6.60144V19.8043Z",
+    fill: "#FFCC4D"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M30.0901 118C29.3559 118 28.6085 117.83 27.9071 117.479C26.7436 116.88 25.8623 115.848 25.4533 114.605C25.0443 113.362 25.1404 112.008 25.7208 110.835L55.0241 51.4185C55.8501 49.7403 57.5415 48.6815 59.3934 48.6815C61.2454 48.6815 62.9367 49.7403 63.7627 51.4185L93.0693 110.835C93.6509 112.007 93.7479 113.361 93.3394 114.604C92.931 115.847 92.0498 116.88 90.8863 117.479C90.3114 117.768 89.6848 117.94 89.0429 117.985C88.4009 118.03 87.7564 117.947 87.1468 117.741C86.5372 117.535 85.9746 117.21 85.4917 116.784C85.0089 116.359 84.6153 115.842 84.334 115.263L59.3967 64.7033L34.4626 115.263C34.0619 116.082 33.4399 116.772 32.6672 117.256C31.8944 117.74 31.0017 117.997 30.0901 118Z",
+    fill: "#FFAC33"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M59.3965 66.8404C58.968 66.84 58.5438 66.7543 58.1488 66.5883C57.7537 66.4223 57.3957 66.1793 57.0955 65.8735L11.5115 19.6601C10.2397 18.3687 10.2397 16.2807 11.5115 14.9926C12.7832 13.7044 14.845 13.7044 16.1135 14.9926L59.3965 58.8689L102.673 14.9893C102.974 14.6835 103.332 14.4407 103.727 14.2749C104.123 14.1092 104.547 14.0238 104.976 14.0238C105.404 14.0238 105.829 14.1092 106.224 14.2749C106.619 14.4407 106.978 14.6835 107.278 14.9893C107.889 15.6124 108.232 16.4503 108.232 17.3231C108.232 18.1958 107.889 19.0337 107.278 19.6568L61.7008 65.8735C61.3994 66.1787 61.0407 66.4212 60.6452 66.5872C60.2498 66.7531 59.8254 66.8392 59.3965 66.8404Z",
+    fill: "#58595B"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M111.494 63.5397C111.494 92.7054 88.1723 116.348 59.3967 116.348C30.6276 116.348 7.30298 92.7054 7.30298 63.5397C7.30298 34.3675 30.6276 10.7249 59.3967 10.7249C88.169 10.7216 111.494 34.3675 111.494 63.5397Z",
+    fill: "#DD2E44"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M98.4678 63.5397C98.4678 85.4156 80.9809 103.148 59.3967 103.148C37.8191 103.148 20.3289 85.4156 20.3289 63.5397C20.3289 41.6605 37.8191 23.9277 59.3967 23.9277C80.9809 23.9245 98.4678 41.6605 98.4678 63.5397Z",
+    fill: "#E6E7E8"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M98.4645 4.12015C95.892 4.11972 93.3453 4.63264 90.9735 5.62885C88.6017 6.62507 86.4526 8.08455 84.652 9.92181L112.28 37.9271C115.958 34.1958 118.013 29.1634 118 23.9245C118 12.9898 109.252 4.12015 98.4645 4.12015ZM19.5356 4.12015C22.1081 4.11991 24.6548 4.6329 27.0265 5.62911C29.3983 6.62531 31.5474 8.0847 33.3482 9.92181L5.71979 37.9271C2.04233 34.1958 -0.0132546 29.1634 6.43217e-05 23.9245C6.43217e-05 12.9898 8.74518 4.12015 19.5356 4.12015Z",
+    fill: "#FFCC4D"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M75.3888 65.5556H58.9999C58.1306 65.5556 57.2969 65.2102 56.6822 64.5955C56.0675 63.9808 55.7222 63.1471 55.7222 62.2778V32.7778C55.7222 31.9085 56.0675 31.0747 56.6822 30.46C57.2969 29.8453 58.1306 29.5 58.9999 29.5C59.8693 29.5 60.703 29.8453 61.3177 30.46C61.9324 31.0747 62.2777 31.9085 62.2777 32.7778V59H75.3888C76.2582 59 77.0919 59.3453 77.7066 59.96C78.3213 60.5747 78.6666 61.4085 78.6666 62.2778C78.6666 63.1471 78.3213 63.9808 77.7066 64.5955C77.0919 65.2102 76.2582 65.5556 75.3888 65.5556Z",
+    fill: "#414042"
+  })), /*#__PURE__*/_react.default.createElement("defs", null, /*#__PURE__*/_react.default.createElement("clipPath", {
+    id: "clip0"
+  }, /*#__PURE__*/_react.default.createElement("rect", {
+    width: "118",
+    height: "118",
+    fill: "white"
+  }))))))), /*#__PURE__*/_react.default.createElement(_components.City, null, /*#__PURE__*/_react.default.createElement(_components.City.Wrapper, null, seatData && seatData.map(seat => {
     const isAlreadyInCart = cartItems.some(item => item.id === seatId);
+    console.log(isAlreadyInCart);
 
-    if (seat.isAvailable === true) {
+    if (seat.isAvailable === true && isAlreadyInCart === false) {
       return /*#__PURE__*/_react.default.createElement(_components.City.RedBgButtons, {
         key: seat.id,
         onClick: () => addToCart(findCityById)
       }, /*#__PURE__*/_react.default.createElement("svg", {
-        xmlns: "http://www.w3.org/2000/svg",
-        enableBackground: "new 0 0 24 24",
-        height: "24",
-        viewBox: "0 0 24 24",
-        width: "24"
-      }, /*#__PURE__*/_react.default.createElement("g", null, /*#__PURE__*/_react.default.createElement("path", {
-        d: "M0,0h24v24H0V0z",
+        width: "61",
+        height: "61",
+        viewBox: "0 0 61 61",
         fill: "none",
-        outline: "#29ABE2"
-      })), /*#__PURE__*/_react.default.createElement("g", null, /*#__PURE__*/_react.default.createElement("path", {
-        d: "M15,3H9C7.9,3,7,3.9,7,5v9h10V5C17,3.9,16.1,3,15,3z M18,15H6c-1.1,0-2,0.9-2,2v3c0,0.55,0.45,1,1,1h0c0.55,0,1-0.45,1-1 v-3h12v3c0,0.55,0.45,1,1,1h0c0.55,0,1-0.45,1-1v-3C20,15.9,19.1,15,18,15z M6,11.5C6,12.33,5.33,13,4.5,13S3,12.33,3,11.5 S3.67,10,4.5,10S6,10.67,6,11.5z M21,11.5c0,0.83-0.67,1.5-1.5,1.5S18,12.33,18,11.5s0.67-1.5,1.5-1.5S21,10.67,21,11.5z"
-      }))));
-    } else {
-      return /*#__PURE__*/_react.default.createElement(_components.City.DefaultBgButtons, {
-        key: seat.id
+        xmlns: "http://www.w3.org/2000/svg"
+      }, /*#__PURE__*/_react.default.createElement("g", {
+        "clip-path": "url(#clip0)"
+      }, /*#__PURE__*/_react.default.createElement("path", {
+        d: "M51.7413 30.7563C51.9281 32.8112 50.527 34.4924 48.5656 34.4924H12.8864C10.925 34.4924 9.52399 32.8112 9.71079 30.7563L11.6722 10.0213C11.859 7.9665 13.6336 6.28528 15.5951 6.28528H45.857C47.8184 6.28528 49.593 7.9665 49.7798 10.0213L51.7413 30.7563Z",
+        fill: "#B4D7EE"
+      }), /*#__PURE__*/_react.default.createElement("path", {
+        d: "M9.15039 29.3553H14.7544V36.8274H9.15039V29.3553Z",
+        fill: "#3E4347"
+      }), /*#__PURE__*/_react.default.createElement("path", {
+        d: "M46.6975 29.3553H52.3016V36.8274H46.6975V29.3553Z",
+        fill: "#3E4347"
+      }), /*#__PURE__*/_react.default.createElement("path", {
+        d: "M14.4744 48.4091H20.0784V57.8426H14.4744V48.4091Z",
+        fill: "#3E4347"
+      }), /*#__PURE__*/_react.default.createElement("path", {
+        d: "M41.3738 48.4091H46.9778V57.8426H41.3738V48.4091Z",
+        fill: "#3E4347"
+      }), /*#__PURE__*/_react.default.createElement("path", {
+        d: "M39.5058 24.2183C39.2256 26.6467 37.2642 28.7015 35.3028 28.7015H26.1495C24.0946 28.7015 22.2266 26.7401 21.9464 24.2183L20.2652 10.5817C19.985 8.1533 21.386 6.09848 23.3474 6.09848H38.0114C40.0662 6.09848 41.4672 8.1533 41.0936 10.5817L39.5058 24.2183Z",
+        fill: "#428BC1"
+      }), /*#__PURE__*/_react.default.createElement("path", {
+        d: "M22.3198 55.8812C22.133 55.4142 21.5726 54.9472 21.1056 54.9472H13.6336C13.0731 54.9472 12.6061 55.3208 12.4193 55.8812L11.0183 59.7107C10.8315 60.1777 11.1117 60.6447 11.6721 60.6447H22.8803C23.4407 60.6447 23.7209 60.2711 23.5341 59.7107L22.3198 55.8812Z",
+        fill: "#94989B"
+      }), /*#__PURE__*/_react.default.createElement("path", {
+        d: "M50.4335 59.7107L49.1259 55.8812C48.9391 55.4142 48.3787 54.9472 47.9116 54.9472H40.4396C39.8792 54.9472 39.4122 55.3208 39.2254 55.8812L37.9177 59.7107C37.7309 60.1777 38.0111 60.6447 38.5715 60.6447H49.7797C50.2467 60.6447 50.5269 60.2711 50.4335 59.7107Z",
+        fill: "#94989B"
+      }), /*#__PURE__*/_react.default.createElement("path", {
+        d: "M43.9889 6.47208C43.9889 8.5269 42.4011 10.2081 40.4397 10.2081H20.9189C18.9574 10.2081 17.3696 8.5269 17.3696 6.47208V4.60406C17.3696 2.54924 18.9574 0.868019 20.9189 0.868019H40.4397C42.4011 0.868019 43.9889 2.54924 43.9889 4.60406V6.47208Z",
+        fill: "#29ABE2"
+      }), /*#__PURE__*/_react.default.createElement("path", {
+        d: "M15.3149 28.1411L15.0347 26.1797C14.8479 25.1523 14.0072 24.3117 13.0732 24.3117H10.5514C9.61739 24.3117 8.77679 25.1523 8.58998 26.1797L8.30978 28.1411C8.12298 29.1685 8.77679 30.0091 9.7108 30.0091H13.9138C14.8479 30.0091 15.5017 29.1685 15.3149 28.1411Z",
+        fill: "#29ABE2"
+      }), /*#__PURE__*/_react.default.createElement("path", {
+        d: "M52.9555 28.1411L52.6753 26.1797C52.4885 25.1523 51.6479 24.3117 50.7139 24.3117H48.192C47.258 24.3117 46.4174 25.1523 46.2306 26.1797L45.9504 28.1411C45.7636 29.1685 46.4174 30.0091 47.3514 30.0091H51.5545C52.4885 30.0091 53.0489 29.1685 52.9555 28.1411Z",
+        fill: "#29ABE2"
+      }), /*#__PURE__*/_react.default.createElement("path", {
+        d: "M48.9392 34.4924H12.5128C9.61734 34.4924 7.84272 37.2944 8.40312 40.7503L8.77673 43.1787C9.33713 46.6345 12.2326 49.4365 15.0346 49.4365H46.2305C49.126 49.4365 51.928 46.6345 52.4884 43.1787L52.9554 40.7503C53.6092 37.3878 51.7412 34.4924 48.9392 34.4924Z",
+        fill: "#29ABE2"
+      })), /*#__PURE__*/_react.default.createElement("defs", null, /*#__PURE__*/_react.default.createElement("linearGradient", {
+        id: "paint0_linear",
+        x1: "29.8883",
+        y1: "0",
+        x2: "29.8883",
+        y2: "59.7766",
+        gradientUnits: "userSpaceOnUse"
+      }, /*#__PURE__*/_react.default.createElement("stop", {
+        "stop-color": "white"
+      }), /*#__PURE__*/_react.default.createElement("stop", {
+        offset: "1",
+        "stop-color": "white",
+        "stop-opacity": "0"
+      })), /*#__PURE__*/_react.default.createElement("clipPath", {
+        id: "clip0"
+      }, /*#__PURE__*/_react.default.createElement("rect", {
+        width: "59.7766",
+        height: "59.7766",
+        fill: "white",
+        transform: "translate(0.837646 0.868019)"
+      })))));
+    }
+
+    if (isAlreadyInCart === true) {
+      return /*#__PURE__*/_react.default.createElement(_components.City.Buttons, {
+        key: seat.id,
+        onClick: () => removeCartItems(findCityById)
       }, /*#__PURE__*/_react.default.createElement("svg", {
         xmlns: "http://www.w3.org/2000/svg",
         enableBackground: "new 0 0 24 24",
@@ -38822,13 +39451,13 @@ function CityContainer({
         d: "M15,3H9C7.9,3,7,3.9,7,5v9h10V5C17,3.9,16.1,3,15,3z M18,15H6c-1.1,0-2,0.9-2,2v3c0,0.55,0.45,1,1,1h0c0.55,0,1-0.45,1-1 v-3h12v3c0,0.55,0.45,1,1,1h0c0.55,0,1-0.45,1-1v-3C20,15.9,19.1,15,18,15z M6,11.5C6,12.33,5.33,13,4.5,13S3,12.33,3,11.5 S3.67,10,4.5,10S6,10.67,6,11.5z M21,11.5c0,0.83-0.67,1.5-1.5,1.5S18,12.33,18,11.5s0.67-1.5,1.5-1.5S21,10.67,21,11.5z"
       }))));
     }
-  })), /*#__PURE__*/_react.default.createElement(_components.City.Wrapper, null, /*#__PURE__*/_react.default.createElement(_components.City.Frame, null, /*#__PURE__*/_react.default.createElement(_components.City.DepartureTime, null, /*#__PURE__*/_react.default.createElement("span", null, "Departure time: "), hours, ":", minutes)), /*#__PURE__*/_react.default.createElement(_components.City.Frame, null, /*#__PURE__*/_react.default.createElement(_components.City.Name, null, "Driver: ", /*#__PURE__*/_react.default.createElement("span", null, findCityById && findCityById.driverName))), /*#__PURE__*/_react.default.createElement(_components.City.Frame, null, /*#__PURE__*/_react.default.createElement(_components.City.Contact, null, "Drivers'contact: ", /*#__PURE__*/_react.default.createElement("span", null, findCityById && findCityById.driverContact))), /*#__PURE__*/_react.default.createElement(_components.City.Frame, null, /*#__PURE__*/_react.default.createElement(_components.City.EstimatedDuration, null, "Estimated duration: ", /*#__PURE__*/_react.default.createElement("span", null, findCityById && findCityById.estimatedDuration))), /*#__PURE__*/_react.default.createElement(_components.City.Frame, null, /*#__PURE__*/_react.default.createElement(_components.City.Breaks, null, "Breaks: ", /*#__PURE__*/_react.default.createElement("span", null, findCityById && findCityById.breaks))), /*#__PURE__*/_react.default.createElement(_components.City.Frame, null, /*#__PURE__*/_react.default.createElement(_components.City.Price, null, findCityById && findCityById.price, " ", /*#__PURE__*/_react.default.createElement("span", null, "Ar/seat"))), /*#__PURE__*/_react.default.createElement(_components.City.Frame, null, /*#__PURE__*/_react.default.createElement(_components.City.Buttons, {
+  })), /*#__PURE__*/_react.default.createElement(_components.City.Wrapper, null, /*#__PURE__*/_react.default.createElement(_components.City.Frame, null, /*#__PURE__*/_react.default.createElement(_components.City.DepartureTime, null, /*#__PURE__*/_react.default.createElement("span", null, "Departure time: "), hours, ":", minutes)), /*#__PURE__*/_react.default.createElement(_components.City.Frame, null, /*#__PURE__*/_react.default.createElement(_components.City.Name, null, "Driver: ", /*#__PURE__*/_react.default.createElement("span", null, findCityById && findCityById.driverName))), /*#__PURE__*/_react.default.createElement(_components.City.Frame, null, /*#__PURE__*/_react.default.createElement(_components.City.Contact, null, "Drivers'contact: ", /*#__PURE__*/_react.default.createElement("span", null, findCityById && findCityById.driverContact))), /*#__PURE__*/_react.default.createElement(_components.City.Frame, null, /*#__PURE__*/_react.default.createElement(_components.City.EstimatedDuration, null, "Estimated duration: ", /*#__PURE__*/_react.default.createElement("span", null, findCityById && findCityById.estimatedDuration))), /*#__PURE__*/_react.default.createElement(_components.City.Frame, null, /*#__PURE__*/_react.default.createElement(_components.City.Breaks, null, "Breaks: ", /*#__PURE__*/_react.default.createElement("span", null, findCityById && findCityById.breaks))), /*#__PURE__*/_react.default.createElement(_components.City.Frame, null, /*#__PURE__*/_react.default.createElement(_components.City.Price, null, findCityById && findCityById.price, " ", /*#__PURE__*/_react.default.createElement("span", null, "Ar/seat"))), /*#__PURE__*/_react.default.createElement(_components.City.Frame, null, /*#__PURE__*/_react.default.createElement(_components.Buttons, {
     onClick: () => {
       if (displayModal) {
         displayModal(true);
       }
     }
-  }, "Book seats")), /*#__PURE__*/_react.default.createElement(_components.City.Frame, null, /*#__PURE__*/_react.default.createElement(_components.City.Price, null, total !== 0 ? /*#__PURE__*/_react.default.createElement("span", null, "Total: ", total, " Ar") : /*#__PURE__*/_react.default.createElement("span", null, "You didn't book any place yet."))))));
+  }, "Book ", cartItems.length !== 0 ? /*#__PURE__*/_react.default.createElement("span", null, cartItems.length) : null, " seats")), /*#__PURE__*/_react.default.createElement(_components.City.Frame, null, /*#__PURE__*/_react.default.createElement(_components.City.Price, null, total !== 0 ? /*#__PURE__*/_react.default.createElement("span", null, "Total: ", total, " Ar") : /*#__PURE__*/_react.default.createElement("span", null, "You didn't book any place yet."))))));
 }
 
 function mapStateToProps(state) {
@@ -38850,1736 +39479,7 @@ const mapToDispatch = {
 var _default = (0, _reactRedux.connect)(mapStateToProps, mapToDispatch)(CityContainer);
 
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-redux":"node_modules/react-redux/es/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../components":"components/index.js","../actions":"actions/index.js","../components/trips/styles/trips":"components/trips/styles/trips.js"}],"node_modules/react-modal/lib/helpers/tabbable.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = findTabbableDescendants;
-/*!
- * Adapted from jQuery UI core
- *
- * http://jqueryui.com
- *
- * Copyright 2014 jQuery Foundation and other contributors
- * Released under the MIT license.
- * http://jquery.org/license
- *
- * http://api.jqueryui.com/category/ui-core/
- */
-
-var tabbableNode = /input|select|textarea|button|object/;
-
-function hidesContents(element) {
-  var zeroSize = element.offsetWidth <= 0 && element.offsetHeight <= 0; // If the node is empty, this is good enough
-
-  if (zeroSize && !element.innerHTML) return true; // Otherwise we need to check some styles
-
-  var style = window.getComputedStyle(element);
-  return zeroSize ? style.getPropertyValue("overflow") !== "visible" || // if 'overflow: visible' set, check if there is actually any overflow
-  element.scrollWidth <= 0 && element.scrollHeight <= 0 : style.getPropertyValue("display") == "none";
-}
-
-function visible(element) {
-  var parentElement = element;
-
-  while (parentElement) {
-    if (parentElement === document.body) break;
-    if (hidesContents(parentElement)) return false;
-    parentElement = parentElement.parentNode;
-  }
-
-  return true;
-}
-
-function focusable(element, isTabIndexNotNaN) {
-  var nodeName = element.nodeName.toLowerCase();
-  var res = tabbableNode.test(nodeName) && !element.disabled || (nodeName === "a" ? element.href || isTabIndexNotNaN : isTabIndexNotNaN);
-  return res && visible(element);
-}
-
-function tabbable(element) {
-  var tabIndex = element.getAttribute("tabindex");
-  if (tabIndex === null) tabIndex = undefined;
-  var isTabIndexNaN = isNaN(tabIndex);
-  return (isTabIndexNaN || tabIndex >= 0) && focusable(element, !isTabIndexNaN);
-}
-
-function findTabbableDescendants(element) {
-  return [].slice.call(element.querySelectorAll("*"), 0).filter(tabbable);
-}
-
-module.exports = exports["default"];
-},{}],"node_modules/react-modal/lib/helpers/focusManager.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.handleBlur = handleBlur;
-exports.handleFocus = handleFocus;
-exports.markForFocusLater = markForFocusLater;
-exports.returnFocus = returnFocus;
-exports.popWithoutFocus = popWithoutFocus;
-exports.setupScopedFocus = setupScopedFocus;
-exports.teardownScopedFocus = teardownScopedFocus;
-
-var _tabbable = require("../helpers/tabbable");
-
-var _tabbable2 = _interopRequireDefault(_tabbable);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    default: obj
-  };
-}
-
-var focusLaterElements = [];
-var modalElement = null;
-var needToFocus = false;
-
-function handleBlur() {
-  needToFocus = true;
-}
-
-function handleFocus() {
-  if (needToFocus) {
-    needToFocus = false;
-
-    if (!modalElement) {
-      return;
-    } // need to see how jQuery shims document.on('focusin') so we don't need the
-    // setTimeout, firefox doesn't support focusin, if it did, we could focus
-    // the element outside of a setTimeout. Side-effect of this implementation
-    // is that the document.body gets focus, and then we focus our element right
-    // after, seems fine.
-
-
-    setTimeout(function () {
-      if (modalElement.contains(document.activeElement)) {
-        return;
-      }
-
-      var el = (0, _tabbable2.default)(modalElement)[0] || modalElement;
-      el.focus();
-    }, 0);
-  }
-}
-
-function markForFocusLater() {
-  focusLaterElements.push(document.activeElement);
-}
-/* eslint-disable no-console */
-
-
-function returnFocus() {
-  var preventScroll = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
-  var toFocus = null;
-
-  try {
-    if (focusLaterElements.length !== 0) {
-      toFocus = focusLaterElements.pop();
-      toFocus.focus({
-        preventScroll: preventScroll
-      });
-    }
-
-    return;
-  } catch (e) {
-    console.warn(["You tried to return focus to", toFocus, "but it is not in the DOM anymore"].join(" "));
-  }
-}
-/* eslint-enable no-console */
-
-
-function popWithoutFocus() {
-  focusLaterElements.length > 0 && focusLaterElements.pop();
-}
-
-function setupScopedFocus(element) {
-  modalElement = element;
-
-  if (window.addEventListener) {
-    window.addEventListener("blur", handleBlur, false);
-    document.addEventListener("focus", handleFocus, true);
-  } else {
-    window.attachEvent("onBlur", handleBlur);
-    document.attachEvent("onFocus", handleFocus);
-  }
-}
-
-function teardownScopedFocus() {
-  modalElement = null;
-
-  if (window.addEventListener) {
-    window.removeEventListener("blur", handleBlur);
-    document.removeEventListener("focus", handleFocus);
-  } else {
-    window.detachEvent("onBlur", handleBlur);
-    document.detachEvent("onFocus", handleFocus);
-  }
-}
-},{"../helpers/tabbable":"node_modules/react-modal/lib/helpers/tabbable.js"}],"node_modules/react-modal/lib/helpers/scopeTab.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = scopeTab;
-
-var _tabbable = require("./tabbable");
-
-var _tabbable2 = _interopRequireDefault(_tabbable);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    default: obj
-  };
-}
-
-function scopeTab(node, event) {
-  var tabbable = (0, _tabbable2.default)(node);
-
-  if (!tabbable.length) {
-    // Do nothing, since there are no elements that can receive focus.
-    event.preventDefault();
-    return;
-  }
-
-  var target = void 0;
-  var shiftKey = event.shiftKey;
-  var head = tabbable[0];
-  var tail = tabbable[tabbable.length - 1]; // proceed with default browser behavior on tab.
-  // Focus on last element on shift + tab.
-
-  if (node === document.activeElement) {
-    if (!shiftKey) return;
-    target = tail;
-  }
-
-  if (tail === document.activeElement && !shiftKey) {
-    target = head;
-  }
-
-  if (head === document.activeElement && shiftKey) {
-    target = tail;
-  }
-
-  if (target) {
-    event.preventDefault();
-    target.focus();
-    return;
-  } // Safari radio issue.
-  //
-  // Safari does not move the focus to the radio button,
-  // so we need to force it to really walk through all elements.
-  //
-  // This is very error prone, since we are trying to guess
-  // if it is a safari browser from the first occurence between
-  // chrome or safari.
-  //
-  // The chrome user agent contains the first ocurrence
-  // as the 'chrome/version' and later the 'safari/version'.
-
-
-  var checkSafari = /(\bChrome\b|\bSafari\b)\//.exec(navigator.userAgent);
-  var isSafariDesktop = checkSafari != null && checkSafari[1] != "Chrome" && /\biPod\b|\biPad\b/g.exec(navigator.userAgent) == null; // If we are not in safari desktop, let the browser control
-  // the focus
-
-  if (!isSafariDesktop) return;
-  var x = tabbable.indexOf(document.activeElement);
-
-  if (x > -1) {
-    x += shiftKey ? -1 : 1;
-  }
-
-  target = tabbable[x]; // If the tabbable element does not exist,
-  // focus head/tail based on shiftKey
-
-  if (typeof target === "undefined") {
-    event.preventDefault();
-    target = shiftKey ? tail : head;
-    target.focus();
-    return;
-  }
-
-  event.preventDefault();
-  target.focus();
-}
-
-module.exports = exports["default"];
-},{"./tabbable":"node_modules/react-modal/lib/helpers/tabbable.js"}],"node_modules/warning/warning.js":[function(require,module,exports) {
-/**
- * Copyright (c) 2014-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-'use strict';
-/**
- * Similar to invariant but only logs a warning if the condition is not met.
- * This can be used to log issues in development environments in critical
- * paths. Removing the logging code for production environments will keep the
- * same logic and follow the same code paths.
- */
-
-var __DEV__ = "development" !== 'production';
-
-var warning = function () {};
-
-if (__DEV__) {
-  var printWarning = function printWarning(format, args) {
-    var len = arguments.length;
-    args = new Array(len > 1 ? len - 1 : 0);
-
-    for (var key = 1; key < len; key++) {
-      args[key - 1] = arguments[key];
-    }
-
-    var argIndex = 0;
-    var message = 'Warning: ' + format.replace(/%s/g, function () {
-      return args[argIndex++];
-    });
-
-    if (typeof console !== 'undefined') {
-      console.error(message);
-    }
-
-    try {
-      // --- Welcome to debugging React ---
-      // This error was thrown as a convenience so that you can use this stack
-      // to find the callsite that caused this warning to fire.
-      throw new Error(message);
-    } catch (x) {}
-  };
-
-  warning = function (condition, format, args) {
-    var len = arguments.length;
-    args = new Array(len > 2 ? len - 2 : 0);
-
-    for (var key = 2; key < len; key++) {
-      args[key - 2] = arguments[key];
-    }
-
-    if (format === undefined) {
-      throw new Error('`warning(condition, format, ...args)` requires a warning ' + 'message argument');
-    }
-
-    if (!condition) {
-      printWarning.apply(null, [format].concat(args));
-    }
-  };
-}
-
-module.exports = warning;
-},{}],"node_modules/exenv/index.js":[function(require,module,exports) {
-var define;
-/*!
-  Copyright (c) 2015 Jed Watson.
-  Based on code that is Copyright 2013-2015, Facebook, Inc.
-  All rights reserved.
-*/
-/* global define */
-
-(function () {
-	'use strict';
-
-	var canUseDOM = !!(
-		typeof window !== 'undefined' &&
-		window.document &&
-		window.document.createElement
-	);
-
-	var ExecutionEnvironment = {
-
-		canUseDOM: canUseDOM,
-
-		canUseWorkers: typeof Worker !== 'undefined',
-
-		canUseEventListeners:
-			canUseDOM && !!(window.addEventListener || window.attachEvent),
-
-		canUseViewport: canUseDOM && !!window.screen
-
-	};
-
-	if (typeof define === 'function' && typeof define.amd === 'object' && define.amd) {
-		define(function () {
-			return ExecutionEnvironment;
-		});
-	} else if (typeof module !== 'undefined' && module.exports) {
-		module.exports = ExecutionEnvironment;
-	} else {
-		window.ExecutionEnvironment = ExecutionEnvironment;
-	}
-
-}());
-
-},{}],"node_modules/react-modal/lib/helpers/safeHTMLElement.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.canUseDOM = undefined;
-
-var _exenv = require("exenv");
-
-var _exenv2 = _interopRequireDefault(_exenv);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    default: obj
-  };
-}
-
-var EE = _exenv2.default;
-var SafeHTMLElement = EE.canUseDOM ? window.HTMLElement : {};
-var canUseDOM = exports.canUseDOM = EE.canUseDOM;
-exports.default = SafeHTMLElement;
-},{"exenv":"node_modules/exenv/index.js"}],"node_modules/react-modal/lib/helpers/ariaAppHider.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.assertNodeList = assertNodeList;
-exports.setElement = setElement;
-exports.validateElement = validateElement;
-exports.hide = hide;
-exports.show = show;
-exports.documentNotReadyOrSSRTesting = documentNotReadyOrSSRTesting;
-exports.resetForTesting = resetForTesting;
-
-var _warning = require("warning");
-
-var _warning2 = _interopRequireDefault(_warning);
-
-var _safeHTMLElement = require("./safeHTMLElement");
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    default: obj
-  };
-}
-
-var globalElement = null;
-
-function assertNodeList(nodeList, selector) {
-  if (!nodeList || !nodeList.length) {
-    throw new Error("react-modal: No elements were found for selector " + selector + ".");
-  }
-}
-
-function setElement(element) {
-  var useElement = element;
-
-  if (typeof useElement === "string" && _safeHTMLElement.canUseDOM) {
-    var el = document.querySelectorAll(useElement);
-    assertNodeList(el, useElement);
-    useElement = "length" in el ? el[0] : el;
-  }
-
-  globalElement = useElement || globalElement;
-  return globalElement;
-}
-
-function validateElement(appElement) {
-  if (!appElement && !globalElement) {
-    (0, _warning2.default)(false, ["react-modal: App element is not defined.", "Please use `Modal.setAppElement(el)` or set `appElement={el}`.", "This is needed so screen readers don't see main content", "when modal is opened. It is not recommended, but you can opt-out", "by setting `ariaHideApp={false}`."].join(" "));
-    return false;
-  }
-
-  return true;
-}
-
-function hide(appElement) {
-  if (validateElement(appElement)) {
-    (appElement || globalElement).setAttribute("aria-hidden", "true");
-  }
-}
-
-function show(appElement) {
-  if (validateElement(appElement)) {
-    (appElement || globalElement).removeAttribute("aria-hidden");
-  }
-}
-
-function documentNotReadyOrSSRTesting() {
-  globalElement = null;
-}
-
-function resetForTesting() {
-  globalElement = null;
-}
-},{"warning":"node_modules/warning/warning.js","./safeHTMLElement":"node_modules/react-modal/lib/helpers/safeHTMLElement.js"}],"node_modules/react-modal/lib/helpers/classList.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.dumpClassLists = dumpClassLists;
-var htmlClassList = {};
-var docBodyClassList = {};
-
-function dumpClassLists() {
-  if ("development" !== "production") {
-    var classes = document.getElementsByTagName("html")[0].className;
-    var buffer = "Show tracked classes:\n\n";
-    buffer += "<html /> (" + classes + "):\n";
-
-    for (var x in htmlClassList) {
-      buffer += "  " + x + " " + htmlClassList[x] + "\n";
-    }
-
-    classes = document.body.className; // eslint-disable-next-line max-len
-
-    buffer += "\n\ndoc.body (" + classes + "):\n";
-
-    for (var _x in docBodyClassList) {
-      buffer += "  " + _x + " " + docBodyClassList[_x] + "\n";
-    }
-
-    buffer += "\n"; // eslint-disable-next-line no-console
-
-    console.log(buffer);
-  }
-}
-/**
- * Track the number of reference of a class.
- * @param {object} poll The poll to receive the reference.
- * @param {string} className The class name.
- * @return {string}
- */
-
-
-var incrementReference = function incrementReference(poll, className) {
-  if (!poll[className]) {
-    poll[className] = 0;
-  }
-
-  poll[className] += 1;
-  return className;
-};
-/**
- * Drop the reference of a class.
- * @param {object} poll The poll to receive the reference.
- * @param {string} className The class name.
- * @return {string}
- */
-
-
-var decrementReference = function decrementReference(poll, className) {
-  if (poll[className]) {
-    poll[className] -= 1;
-  }
-
-  return className;
-};
-/**
- * Track a class and add to the given class list.
- * @param {Object} classListRef A class list of an element.
- * @param {Object} poll         The poll to be used.
- * @param {Array}  classes      The list of classes to be tracked.
- */
-
-
-var trackClass = function trackClass(classListRef, poll, classes) {
-  classes.forEach(function (className) {
-    incrementReference(poll, className);
-    classListRef.add(className);
-  });
-};
-/**
- * Untrack a class and remove from the given class list if the reference
- * reaches 0.
- * @param {Object} classListRef A class list of an element.
- * @param {Object} poll         The poll to be used.
- * @param {Array}  classes      The list of classes to be untracked.
- */
-
-
-var untrackClass = function untrackClass(classListRef, poll, classes) {
-  classes.forEach(function (className) {
-    decrementReference(poll, className);
-    poll[className] === 0 && classListRef.remove(className);
-  });
-};
-/**
- * Public inferface to add classes to the document.body.
- * @param {string} bodyClass The class string to be added.
- *                           It may contain more then one class
- *                           with ' ' as separator.
- */
-
-
-var add = exports.add = function add(element, classString) {
-  return trackClass(element.classList, element.nodeName.toLowerCase() == "html" ? htmlClassList : docBodyClassList, classString.split(" "));
-};
-/**
- * Public inferface to remove classes from the document.body.
- * @param {string} bodyClass The class string to be added.
- *                           It may contain more then one class
- *                           with ' ' as separator.
- */
-
-
-var remove = exports.remove = function remove(element, classString) {
-  return untrackClass(element.classList, element.nodeName.toLowerCase() == "html" ? htmlClassList : docBodyClassList, classString.split(" "));
-};
-},{}],"node_modules/react-modal/lib/helpers/portalOpenInstances.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-} // Tracks portals that are open and emits events to subscribers
-
-
-var PortalOpenInstances = function PortalOpenInstances() {
-  var _this = this;
-
-  _classCallCheck(this, PortalOpenInstances);
-
-  this.register = function (openInstance) {
-    if (_this.openInstances.indexOf(openInstance) !== -1) {
-      if ("development" !== "production") {
-        // eslint-disable-next-line no-console
-        console.warn("React-Modal: Cannot register modal instance that's already open");
-      }
-
-      return;
-    }
-
-    _this.openInstances.push(openInstance);
-
-    _this.emit("register");
-  };
-
-  this.deregister = function (openInstance) {
-    var index = _this.openInstances.indexOf(openInstance);
-
-    if (index === -1) {
-      if ("development" !== "production") {
-        // eslint-disable-next-line no-console
-        console.warn("React-Modal: Unable to deregister " + openInstance + " as " + "it was never registered");
-      }
-
-      return;
-    }
-
-    _this.openInstances.splice(index, 1);
-
-    _this.emit("deregister");
-  };
-
-  this.subscribe = function (callback) {
-    _this.subscribers.push(callback);
-  };
-
-  this.emit = function (eventType) {
-    _this.subscribers.forEach(function (subscriber) {
-      return subscriber(eventType, // shallow copy to avoid accidental mutation
-      _this.openInstances.slice());
-    });
-  };
-
-  this.openInstances = [];
-  this.subscribers = [];
-};
-
-var portalOpenInstances = new PortalOpenInstances();
-exports.default = portalOpenInstances;
-module.exports = exports["default"];
-},{}],"node_modules/react-modal/lib/helpers/bodyTrap.js":[function(require,module,exports) {
-"use strict";
-
-var _portalOpenInstances = require("./portalOpenInstances");
-
-var _portalOpenInstances2 = _interopRequireDefault(_portalOpenInstances);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    default: obj
-  };
-} // Body focus trap see Issue #742
-
-
-var before = void 0,
-    after = void 0,
-    instances = [];
-
-function focusContent() {
-  if (instances.length === 0) {
-    if ("development" !== "production") {
-      // eslint-disable-next-line no-console
-      console.warn("React-Modal: Open instances > 0 expected");
-    }
-
-    return;
-  }
-
-  instances[instances.length - 1].focusContent();
-}
-
-function bodyTrap(eventType, openInstances) {
-  if (!before || !after) {
-    before = document.createElement("div");
-    before.setAttribute("data-react-modal-body-trap", "");
-    before.style.position = "absolute";
-    before.style.opacity = "0";
-    before.setAttribute("tabindex", "0");
-    before.addEventListener("focus", focusContent);
-    after = before.cloneNode();
-    after.addEventListener("focus", focusContent);
-  }
-
-  instances = openInstances;
-
-  if (instances.length > 0) {
-    // Add focus trap
-    if (document.body.firstChild !== before) {
-      document.body.insertBefore(before, document.body.firstChild);
-    }
-
-    if (document.body.lastChild !== after) {
-      document.body.appendChild(after);
-    }
-  } else {
-    // Remove focus trap
-    if (before.parentElement) {
-      before.parentElement.removeChild(before);
-    }
-
-    if (after.parentElement) {
-      after.parentElement.removeChild(after);
-    }
-  }
-}
-
-_portalOpenInstances2.default.subscribe(bodyTrap);
-},{"./portalOpenInstances":"node_modules/react-modal/lib/helpers/portalOpenInstances.js"}],"node_modules/react-modal/lib/components/ModalPortal.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _extends = Object.assign || function (target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i];
-
-    for (var key in source) {
-      if (Object.prototype.hasOwnProperty.call(source, key)) {
-        target[key] = source[key];
-      }
-    }
-  }
-
-  return target;
-};
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
-  return typeof obj;
-} : function (obj) {
-  return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-};
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
-      Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }
-
-  return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) defineProperties(Constructor, staticProps);
-    return Constructor;
-  };
-}();
-
-var _react = require("react");
-
-var _propTypes = require("prop-types");
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _focusManager = require("../helpers/focusManager");
-
-var focusManager = _interopRequireWildcard(_focusManager);
-
-var _scopeTab = require("../helpers/scopeTab");
-
-var _scopeTab2 = _interopRequireDefault(_scopeTab);
-
-var _ariaAppHider = require("../helpers/ariaAppHider");
-
-var ariaAppHider = _interopRequireWildcard(_ariaAppHider);
-
-var _classList = require("../helpers/classList");
-
-var classList = _interopRequireWildcard(_classList);
-
-var _safeHTMLElement = require("../helpers/safeHTMLElement");
-
-var _safeHTMLElement2 = _interopRequireDefault(_safeHTMLElement);
-
-var _portalOpenInstances = require("../helpers/portalOpenInstances");
-
-var _portalOpenInstances2 = _interopRequireDefault(_portalOpenInstances);
-
-require("../helpers/bodyTrap");
-
-function _interopRequireWildcard(obj) {
-  if (obj && obj.__esModule) {
-    return obj;
-  } else {
-    var newObj = {};
-
-    if (obj != null) {
-      for (var key in obj) {
-        if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];
-      }
-    }
-
-    newObj.default = obj;
-    return newObj;
-  }
-}
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    default: obj
-  };
-}
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return call && (typeof call === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      enumerable: false,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-} // so that our CSS is statically analyzable
-
-
-var CLASS_NAMES = {
-  overlay: "ReactModal__Overlay",
-  content: "ReactModal__Content"
-};
-var TAB_KEY = 9;
-var ESC_KEY = 27;
-var ariaHiddenInstances = 0;
-
-var ModalPortal = function (_Component) {
-  _inherits(ModalPortal, _Component);
-
-  function ModalPortal(props) {
-    _classCallCheck(this, ModalPortal);
-
-    var _this = _possibleConstructorReturn(this, (ModalPortal.__proto__ || Object.getPrototypeOf(ModalPortal)).call(this, props));
-
-    _this.setOverlayRef = function (overlay) {
-      _this.overlay = overlay;
-      _this.props.overlayRef && _this.props.overlayRef(overlay);
-    };
-
-    _this.setContentRef = function (content) {
-      _this.content = content;
-      _this.props.contentRef && _this.props.contentRef(content);
-    };
-
-    _this.afterClose = function () {
-      var _this$props = _this.props,
-          appElement = _this$props.appElement,
-          ariaHideApp = _this$props.ariaHideApp,
-          htmlOpenClassName = _this$props.htmlOpenClassName,
-          bodyOpenClassName = _this$props.bodyOpenClassName; // Remove classes.
-
-      bodyOpenClassName && classList.remove(document.body, bodyOpenClassName);
-      htmlOpenClassName && classList.remove(document.getElementsByTagName("html")[0], htmlOpenClassName); // Reset aria-hidden attribute if all modals have been removed
-
-      if (ariaHideApp && ariaHiddenInstances > 0) {
-        ariaHiddenInstances -= 1;
-
-        if (ariaHiddenInstances === 0) {
-          ariaAppHider.show(appElement);
-        }
-      }
-
-      if (_this.props.shouldFocusAfterRender) {
-        if (_this.props.shouldReturnFocusAfterClose) {
-          focusManager.returnFocus(_this.props.preventScroll);
-          focusManager.teardownScopedFocus();
-        } else {
-          focusManager.popWithoutFocus();
-        }
-      }
-
-      if (_this.props.onAfterClose) {
-        _this.props.onAfterClose();
-      }
-
-      _portalOpenInstances2.default.deregister(_this);
-    };
-
-    _this.open = function () {
-      _this.beforeOpen();
-
-      if (_this.state.afterOpen && _this.state.beforeClose) {
-        clearTimeout(_this.closeTimer);
-
-        _this.setState({
-          beforeClose: false
-        });
-      } else {
-        if (_this.props.shouldFocusAfterRender) {
-          focusManager.setupScopedFocus(_this.node);
-          focusManager.markForFocusLater();
-        }
-
-        _this.setState({
-          isOpen: true
-        }, function () {
-          _this.setState({
-            afterOpen: true
-          });
-
-          if (_this.props.isOpen && _this.props.onAfterOpen) {
-            _this.props.onAfterOpen({
-              overlayEl: _this.overlay,
-              contentEl: _this.content
-            });
-          }
-        });
-      }
-    };
-
-    _this.close = function () {
-      if (_this.props.closeTimeoutMS > 0) {
-        _this.closeWithTimeout();
-      } else {
-        _this.closeWithoutTimeout();
-      }
-    };
-
-    _this.focusContent = function () {
-      return _this.content && !_this.contentHasFocus() && _this.content.focus({
-        preventScroll: true
-      });
-    };
-
-    _this.closeWithTimeout = function () {
-      var closesAt = Date.now() + _this.props.closeTimeoutMS;
-
-      _this.setState({
-        beforeClose: true,
-        closesAt: closesAt
-      }, function () {
-        _this.closeTimer = setTimeout(_this.closeWithoutTimeout, _this.state.closesAt - Date.now());
-      });
-    };
-
-    _this.closeWithoutTimeout = function () {
-      _this.setState({
-        beforeClose: false,
-        isOpen: false,
-        afterOpen: false,
-        closesAt: null
-      }, _this.afterClose);
-    };
-
-    _this.handleKeyDown = function (event) {
-      if (event.keyCode === TAB_KEY) {
-        (0, _scopeTab2.default)(_this.content, event);
-      }
-
-      if (_this.props.shouldCloseOnEsc && event.keyCode === ESC_KEY) {
-        event.stopPropagation();
-
-        _this.requestClose(event);
-      }
-    };
-
-    _this.handleOverlayOnClick = function (event) {
-      if (_this.shouldClose === null) {
-        _this.shouldClose = true;
-      }
-
-      if (_this.shouldClose && _this.props.shouldCloseOnOverlayClick) {
-        if (_this.ownerHandlesClose()) {
-          _this.requestClose(event);
-        } else {
-          _this.focusContent();
-        }
-      }
-
-      _this.shouldClose = null;
-    };
-
-    _this.handleContentOnMouseUp = function () {
-      _this.shouldClose = false;
-    };
-
-    _this.handleOverlayOnMouseDown = function (event) {
-      if (!_this.props.shouldCloseOnOverlayClick && event.target == _this.overlay) {
-        event.preventDefault();
-      }
-    };
-
-    _this.handleContentOnClick = function () {
-      _this.shouldClose = false;
-    };
-
-    _this.handleContentOnMouseDown = function () {
-      _this.shouldClose = false;
-    };
-
-    _this.requestClose = function (event) {
-      return _this.ownerHandlesClose() && _this.props.onRequestClose(event);
-    };
-
-    _this.ownerHandlesClose = function () {
-      return _this.props.onRequestClose;
-    };
-
-    _this.shouldBeClosed = function () {
-      return !_this.state.isOpen && !_this.state.beforeClose;
-    };
-
-    _this.contentHasFocus = function () {
-      return document.activeElement === _this.content || _this.content.contains(document.activeElement);
-    };
-
-    _this.buildClassName = function (which, additional) {
-      var classNames = (typeof additional === "undefined" ? "undefined" : _typeof(additional)) === "object" ? additional : {
-        base: CLASS_NAMES[which],
-        afterOpen: CLASS_NAMES[which] + "--after-open",
-        beforeClose: CLASS_NAMES[which] + "--before-close"
-      };
-      var className = classNames.base;
-
-      if (_this.state.afterOpen) {
-        className = className + " " + classNames.afterOpen;
-      }
-
-      if (_this.state.beforeClose) {
-        className = className + " " + classNames.beforeClose;
-      }
-
-      return typeof additional === "string" && additional ? className + " " + additional : className;
-    };
-
-    _this.attributesFromObject = function (prefix, items) {
-      return Object.keys(items).reduce(function (acc, name) {
-        acc[prefix + "-" + name] = items[name];
-        return acc;
-      }, {});
-    };
-
-    _this.state = {
-      afterOpen: false,
-      beforeClose: false
-    };
-    _this.shouldClose = null;
-    _this.moveFromContentToOverlay = null;
-    return _this;
-  }
-
-  _createClass(ModalPortal, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      if (this.props.isOpen) {
-        this.open();
-      }
-    }
-  }, {
-    key: "componentDidUpdate",
-    value: function componentDidUpdate(prevProps, prevState) {
-      if ("development" !== "production") {
-        if (prevProps.bodyOpenClassName !== this.props.bodyOpenClassName) {
-          // eslint-disable-next-line no-console
-          console.warn('React-Modal: "bodyOpenClassName" prop has been modified. ' + "This may cause unexpected behavior when multiple modals are open.");
-        }
-
-        if (prevProps.htmlOpenClassName !== this.props.htmlOpenClassName) {
-          // eslint-disable-next-line no-console
-          console.warn('React-Modal: "htmlOpenClassName" prop has been modified. ' + "This may cause unexpected behavior when multiple modals are open.");
-        }
-      }
-
-      if (this.props.isOpen && !prevProps.isOpen) {
-        this.open();
-      } else if (!this.props.isOpen && prevProps.isOpen) {
-        this.close();
-      } // Focus only needs to be set once when the modal is being opened
-
-
-      if (this.props.shouldFocusAfterRender && this.state.isOpen && !prevState.isOpen) {
-        this.focusContent();
-      }
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      if (this.state.isOpen) {
-        this.afterClose();
-      }
-
-      clearTimeout(this.closeTimer);
-    }
-  }, {
-    key: "beforeOpen",
-    value: function beforeOpen() {
-      var _props = this.props,
-          appElement = _props.appElement,
-          ariaHideApp = _props.ariaHideApp,
-          htmlOpenClassName = _props.htmlOpenClassName,
-          bodyOpenClassName = _props.bodyOpenClassName; // Add classes.
-
-      bodyOpenClassName && classList.add(document.body, bodyOpenClassName);
-      htmlOpenClassName && classList.add(document.getElementsByTagName("html")[0], htmlOpenClassName);
-
-      if (ariaHideApp) {
-        ariaHiddenInstances += 1;
-        ariaAppHider.hide(appElement);
-      }
-
-      _portalOpenInstances2.default.register(this);
-    } // Don't steal focus from inner elements
-
-  }, {
-    key: "render",
-    value: function render() {
-      var _props2 = this.props,
-          id = _props2.id,
-          className = _props2.className,
-          overlayClassName = _props2.overlayClassName,
-          defaultStyles = _props2.defaultStyles,
-          children = _props2.children;
-      var contentStyles = className ? {} : defaultStyles.content;
-      var overlayStyles = overlayClassName ? {} : defaultStyles.overlay;
-
-      if (this.shouldBeClosed()) {
-        return null;
-      }
-
-      var overlayProps = {
-        ref: this.setOverlayRef,
-        className: this.buildClassName("overlay", overlayClassName),
-        style: _extends({}, overlayStyles, this.props.style.overlay),
-        onClick: this.handleOverlayOnClick,
-        onMouseDown: this.handleOverlayOnMouseDown
-      };
-
-      var contentProps = _extends({
-        id: id,
-        ref: this.setContentRef,
-        style: _extends({}, contentStyles, this.props.style.content),
-        className: this.buildClassName("content", className),
-        tabIndex: "-1",
-        onKeyDown: this.handleKeyDown,
-        onMouseDown: this.handleContentOnMouseDown,
-        onMouseUp: this.handleContentOnMouseUp,
-        onClick: this.handleContentOnClick,
-        role: this.props.role,
-        "aria-label": this.props.contentLabel
-      }, this.attributesFromObject("aria", _extends({
-        modal: true
-      }, this.props.aria)), this.attributesFromObject("data", this.props.data || {}), {
-        "data-testid": this.props.testId
-      });
-
-      var contentElement = this.props.contentElement(contentProps, children);
-      return this.props.overlayElement(overlayProps, contentElement);
-    }
-  }]);
-
-  return ModalPortal;
-}(_react.Component);
-
-ModalPortal.defaultProps = {
-  style: {
-    overlay: {},
-    content: {}
-  },
-  defaultStyles: {}
-};
-ModalPortal.propTypes = {
-  isOpen: _propTypes2.default.bool.isRequired,
-  defaultStyles: _propTypes2.default.shape({
-    content: _propTypes2.default.object,
-    overlay: _propTypes2.default.object
-  }),
-  style: _propTypes2.default.shape({
-    content: _propTypes2.default.object,
-    overlay: _propTypes2.default.object
-  }),
-  className: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.object]),
-  overlayClassName: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.object]),
-  bodyOpenClassName: _propTypes2.default.string,
-  htmlOpenClassName: _propTypes2.default.string,
-  ariaHideApp: _propTypes2.default.bool,
-  appElement: _propTypes2.default.instanceOf(_safeHTMLElement2.default),
-  onAfterOpen: _propTypes2.default.func,
-  onAfterClose: _propTypes2.default.func,
-  onRequestClose: _propTypes2.default.func,
-  closeTimeoutMS: _propTypes2.default.number,
-  shouldFocusAfterRender: _propTypes2.default.bool,
-  shouldCloseOnOverlayClick: _propTypes2.default.bool,
-  shouldReturnFocusAfterClose: _propTypes2.default.bool,
-  preventScroll: _propTypes2.default.bool,
-  role: _propTypes2.default.string,
-  contentLabel: _propTypes2.default.string,
-  aria: _propTypes2.default.object,
-  data: _propTypes2.default.object,
-  children: _propTypes2.default.node,
-  shouldCloseOnEsc: _propTypes2.default.bool,
-  overlayRef: _propTypes2.default.func,
-  contentRef: _propTypes2.default.func,
-  id: _propTypes2.default.string,
-  overlayElement: _propTypes2.default.func,
-  contentElement: _propTypes2.default.func,
-  testId: _propTypes2.default.string
-};
-exports.default = ModalPortal;
-module.exports = exports["default"];
-},{"react":"node_modules/react/index.js","prop-types":"node_modules/prop-types/index.js","../helpers/focusManager":"node_modules/react-modal/lib/helpers/focusManager.js","../helpers/scopeTab":"node_modules/react-modal/lib/helpers/scopeTab.js","../helpers/ariaAppHider":"node_modules/react-modal/lib/helpers/ariaAppHider.js","../helpers/classList":"node_modules/react-modal/lib/helpers/classList.js","../helpers/safeHTMLElement":"node_modules/react-modal/lib/helpers/safeHTMLElement.js","../helpers/portalOpenInstances":"node_modules/react-modal/lib/helpers/portalOpenInstances.js","../helpers/bodyTrap":"node_modules/react-modal/lib/helpers/bodyTrap.js"}],"node_modules/react-lifecycles-compat/react-lifecycles-compat.es.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.polyfill = polyfill;
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-function componentWillMount() {
-  // Call this.constructor.gDSFP to support sub-classes.
-  var state = this.constructor.getDerivedStateFromProps(this.props, this.state);
-
-  if (state !== null && state !== undefined) {
-    this.setState(state);
-  }
-}
-
-function componentWillReceiveProps(nextProps) {
-  // Call this.constructor.gDSFP to support sub-classes.
-  // Use the setState() updater to ensure state isn't stale in certain edge cases.
-  function updater(prevState) {
-    var state = this.constructor.getDerivedStateFromProps(nextProps, prevState);
-    return state !== null && state !== undefined ? state : null;
-  } // Binding "this" is important for shallow renderer support.
-
-
-  this.setState(updater.bind(this));
-}
-
-function componentWillUpdate(nextProps, nextState) {
-  try {
-    var prevProps = this.props;
-    var prevState = this.state;
-    this.props = nextProps;
-    this.state = nextState;
-    this.__reactInternalSnapshotFlag = true;
-    this.__reactInternalSnapshot = this.getSnapshotBeforeUpdate(prevProps, prevState);
-  } finally {
-    this.props = prevProps;
-    this.state = prevState;
-  }
-} // React may warn about cWM/cWRP/cWU methods being deprecated.
-// Add a flag to suppress these warnings for this special case.
-
-
-componentWillMount.__suppressDeprecationWarning = true;
-componentWillReceiveProps.__suppressDeprecationWarning = true;
-componentWillUpdate.__suppressDeprecationWarning = true;
-
-function polyfill(Component) {
-  var prototype = Component.prototype;
-
-  if (!prototype || !prototype.isReactComponent) {
-    throw new Error('Can only polyfill class components');
-  }
-
-  if (typeof Component.getDerivedStateFromProps !== 'function' && typeof prototype.getSnapshotBeforeUpdate !== 'function') {
-    return Component;
-  } // If new component APIs are defined, "unsafe" lifecycles won't be called.
-  // Error if any of these lifecycles are present,
-  // Because they would work differently between older and newer (16.3+) versions of React.
-
-
-  var foundWillMountName = null;
-  var foundWillReceivePropsName = null;
-  var foundWillUpdateName = null;
-
-  if (typeof prototype.componentWillMount === 'function') {
-    foundWillMountName = 'componentWillMount';
-  } else if (typeof prototype.UNSAFE_componentWillMount === 'function') {
-    foundWillMountName = 'UNSAFE_componentWillMount';
-  }
-
-  if (typeof prototype.componentWillReceiveProps === 'function') {
-    foundWillReceivePropsName = 'componentWillReceiveProps';
-  } else if (typeof prototype.UNSAFE_componentWillReceiveProps === 'function') {
-    foundWillReceivePropsName = 'UNSAFE_componentWillReceiveProps';
-  }
-
-  if (typeof prototype.componentWillUpdate === 'function') {
-    foundWillUpdateName = 'componentWillUpdate';
-  } else if (typeof prototype.UNSAFE_componentWillUpdate === 'function') {
-    foundWillUpdateName = 'UNSAFE_componentWillUpdate';
-  }
-
-  if (foundWillMountName !== null || foundWillReceivePropsName !== null || foundWillUpdateName !== null) {
-    var componentName = Component.displayName || Component.name;
-    var newApiName = typeof Component.getDerivedStateFromProps === 'function' ? 'getDerivedStateFromProps()' : 'getSnapshotBeforeUpdate()';
-    throw Error('Unsafe legacy lifecycles will not be called for components using new component APIs.\n\n' + componentName + ' uses ' + newApiName + ' but also contains the following legacy lifecycles:' + (foundWillMountName !== null ? '\n  ' + foundWillMountName : '') + (foundWillReceivePropsName !== null ? '\n  ' + foundWillReceivePropsName : '') + (foundWillUpdateName !== null ? '\n  ' + foundWillUpdateName : '') + '\n\nThe above lifecycles should be removed. Learn more about this warning here:\n' + 'https://fb.me/react-async-component-lifecycle-hooks');
-  } // React <= 16.2 does not support static getDerivedStateFromProps.
-  // As a workaround, use cWM and cWRP to invoke the new static lifecycle.
-  // Newer versions of React will ignore these lifecycles if gDSFP exists.
-
-
-  if (typeof Component.getDerivedStateFromProps === 'function') {
-    prototype.componentWillMount = componentWillMount;
-    prototype.componentWillReceiveProps = componentWillReceiveProps;
-  } // React <= 16.2 does not support getSnapshotBeforeUpdate.
-  // As a workaround, use cWU to invoke the new lifecycle.
-  // Newer versions of React will ignore that lifecycle if gSBU exists.
-
-
-  if (typeof prototype.getSnapshotBeforeUpdate === 'function') {
-    if (typeof prototype.componentDidUpdate !== 'function') {
-      throw new Error('Cannot polyfill getSnapshotBeforeUpdate() for components that do not define componentDidUpdate() on the prototype');
-    }
-
-    prototype.componentWillUpdate = componentWillUpdate;
-    var componentDidUpdate = prototype.componentDidUpdate;
-
-    prototype.componentDidUpdate = function componentDidUpdatePolyfill(prevProps, prevState, maybeSnapshot) {
-      // 16.3+ will not execute our will-update method;
-      // It will pass a snapshot value to did-update though.
-      // Older versions will require our polyfilled will-update value.
-      // We need to handle both cases, but can't just check for the presence of "maybeSnapshot",
-      // Because for <= 15.x versions this might be a "prevContext" object.
-      // We also can't just check "__reactInternalSnapshot",
-      // Because get-snapshot might return a falsy value.
-      // So check for the explicit __reactInternalSnapshotFlag flag to determine behavior.
-      var snapshot = this.__reactInternalSnapshotFlag ? this.__reactInternalSnapshot : maybeSnapshot;
-      componentDidUpdate.call(this, prevProps, prevState, snapshot);
-    };
-  }
-
-  return Component;
-}
-},{}],"node_modules/react-modal/lib/components/Modal.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.bodyOpenClassName = exports.portalClassName = undefined;
-
-var _extends = Object.assign || function (target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i];
-
-    for (var key in source) {
-      if (Object.prototype.hasOwnProperty.call(source, key)) {
-        target[key] = source[key];
-      }
-    }
-  }
-
-  return target;
-};
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
-      Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }
-
-  return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) defineProperties(Constructor, staticProps);
-    return Constructor;
-  };
-}();
-
-var _react = require("react");
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = require("react-dom");
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _propTypes = require("prop-types");
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _ModalPortal = require("./ModalPortal");
-
-var _ModalPortal2 = _interopRequireDefault(_ModalPortal);
-
-var _ariaAppHider = require("../helpers/ariaAppHider");
-
-var ariaAppHider = _interopRequireWildcard(_ariaAppHider);
-
-var _safeHTMLElement = require("../helpers/safeHTMLElement");
-
-var _safeHTMLElement2 = _interopRequireDefault(_safeHTMLElement);
-
-var _reactLifecyclesCompat = require("react-lifecycles-compat");
-
-function _interopRequireWildcard(obj) {
-  if (obj && obj.__esModule) {
-    return obj;
-  } else {
-    var newObj = {};
-
-    if (obj != null) {
-      for (var key in obj) {
-        if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];
-      }
-    }
-
-    newObj.default = obj;
-    return newObj;
-  }
-}
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    default: obj
-  };
-}
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return call && (typeof call === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      enumerable: false,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
-
-var portalClassName = exports.portalClassName = "ReactModalPortal";
-var bodyOpenClassName = exports.bodyOpenClassName = "ReactModal__Body--open";
-var isReact16 = _safeHTMLElement.canUseDOM && _reactDom2.default.createPortal !== undefined;
-
-var getCreatePortal = function getCreatePortal() {
-  return isReact16 ? _reactDom2.default.createPortal : _reactDom2.default.unstable_renderSubtreeIntoContainer;
-};
-
-function getParentElement(parentSelector) {
-  return parentSelector();
-}
-
-var Modal = function (_Component) {
-  _inherits(Modal, _Component);
-
-  function Modal() {
-    var _ref;
-
-    var _temp, _this, _ret;
-
-    _classCallCheck(this, Modal);
-
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Modal.__proto__ || Object.getPrototypeOf(Modal)).call.apply(_ref, [this].concat(args))), _this), _this.removePortal = function () {
-      !isReact16 && _reactDom2.default.unmountComponentAtNode(_this.node);
-      var parent = getParentElement(_this.props.parentSelector);
-
-      if (parent && parent.contains(_this.node)) {
-        parent.removeChild(_this.node);
-      } else {
-        // eslint-disable-next-line no-console
-        console.warn('React-Modal: "parentSelector" prop did not returned any DOM ' + "element. Make sure that the parent element is unmounted to " + "avoid any memory leaks.");
-      }
-    }, _this.portalRef = function (ref) {
-      _this.portal = ref;
-    }, _this.renderPortal = function (props) {
-      var createPortal = getCreatePortal();
-      var portal = createPortal(_this, _react2.default.createElement(_ModalPortal2.default, _extends({
-        defaultStyles: Modal.defaultStyles
-      }, props)), _this.node);
-
-      _this.portalRef(portal);
-    }, _temp), _possibleConstructorReturn(_this, _ret);
-  }
-
-  _createClass(Modal, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      if (!_safeHTMLElement.canUseDOM) return;
-
-      if (!isReact16) {
-        this.node = document.createElement("div");
-      }
-
-      this.node.className = this.props.portalClassName;
-      var parent = getParentElement(this.props.parentSelector);
-      parent.appendChild(this.node);
-      !isReact16 && this.renderPortal(this.props);
-    }
-  }, {
-    key: "getSnapshotBeforeUpdate",
-    value: function getSnapshotBeforeUpdate(prevProps) {
-      var prevParent = getParentElement(prevProps.parentSelector);
-      var nextParent = getParentElement(this.props.parentSelector);
-      return {
-        prevParent: prevParent,
-        nextParent: nextParent
-      };
-    }
-  }, {
-    key: "componentDidUpdate",
-    value: function componentDidUpdate(prevProps, _, snapshot) {
-      if (!_safeHTMLElement.canUseDOM) return;
-      var _props = this.props,
-          isOpen = _props.isOpen,
-          portalClassName = _props.portalClassName;
-
-      if (prevProps.portalClassName !== portalClassName) {
-        this.node.className = portalClassName;
-      }
-
-      var prevParent = snapshot.prevParent,
-          nextParent = snapshot.nextParent;
-
-      if (nextParent !== prevParent) {
-        prevParent.removeChild(this.node);
-        nextParent.appendChild(this.node);
-      } // Stop unnecessary renders if modal is remaining closed
-
-
-      if (!prevProps.isOpen && !isOpen) return;
-      !isReact16 && this.renderPortal(this.props);
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      if (!_safeHTMLElement.canUseDOM || !this.node || !this.portal) return;
-      var state = this.portal.state;
-      var now = Date.now();
-      var closesAt = state.isOpen && this.props.closeTimeoutMS && (state.closesAt || now + this.props.closeTimeoutMS);
-
-      if (closesAt) {
-        if (!state.beforeClose) {
-          this.portal.closeWithTimeout();
-        }
-
-        setTimeout(this.removePortal, closesAt - now);
-      } else {
-        this.removePortal();
-      }
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      if (!_safeHTMLElement.canUseDOM || !isReact16) {
-        return null;
-      }
-
-      if (!this.node && isReact16) {
-        this.node = document.createElement("div");
-      }
-
-      var createPortal = getCreatePortal();
-      return createPortal(_react2.default.createElement(_ModalPortal2.default, _extends({
-        ref: this.portalRef,
-        defaultStyles: Modal.defaultStyles
-      }, this.props)), this.node);
-    }
-  }], [{
-    key: "setAppElement",
-    value: function setAppElement(element) {
-      ariaAppHider.setElement(element);
-    }
-    /* eslint-disable react/no-unused-prop-types */
-
-    /* eslint-enable react/no-unused-prop-types */
-
-  }]);
-
-  return Modal;
-}(_react.Component);
-
-Modal.propTypes = {
-  isOpen: _propTypes2.default.bool.isRequired,
-  style: _propTypes2.default.shape({
-    content: _propTypes2.default.object,
-    overlay: _propTypes2.default.object
-  }),
-  portalClassName: _propTypes2.default.string,
-  bodyOpenClassName: _propTypes2.default.string,
-  htmlOpenClassName: _propTypes2.default.string,
-  className: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.shape({
-    base: _propTypes2.default.string.isRequired,
-    afterOpen: _propTypes2.default.string.isRequired,
-    beforeClose: _propTypes2.default.string.isRequired
-  })]),
-  overlayClassName: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.shape({
-    base: _propTypes2.default.string.isRequired,
-    afterOpen: _propTypes2.default.string.isRequired,
-    beforeClose: _propTypes2.default.string.isRequired
-  })]),
-  appElement: _propTypes2.default.instanceOf(_safeHTMLElement2.default),
-  onAfterOpen: _propTypes2.default.func,
-  onRequestClose: _propTypes2.default.func,
-  closeTimeoutMS: _propTypes2.default.number,
-  ariaHideApp: _propTypes2.default.bool,
-  shouldFocusAfterRender: _propTypes2.default.bool,
-  shouldCloseOnOverlayClick: _propTypes2.default.bool,
-  shouldReturnFocusAfterClose: _propTypes2.default.bool,
-  preventScroll: _propTypes2.default.bool,
-  parentSelector: _propTypes2.default.func,
-  aria: _propTypes2.default.object,
-  data: _propTypes2.default.object,
-  role: _propTypes2.default.string,
-  contentLabel: _propTypes2.default.string,
-  shouldCloseOnEsc: _propTypes2.default.bool,
-  overlayRef: _propTypes2.default.func,
-  contentRef: _propTypes2.default.func,
-  id: _propTypes2.default.string,
-  overlayElement: _propTypes2.default.func,
-  contentElement: _propTypes2.default.func
-};
-Modal.defaultProps = {
-  isOpen: false,
-  portalClassName: portalClassName,
-  bodyOpenClassName: bodyOpenClassName,
-  role: "dialog",
-  ariaHideApp: true,
-  closeTimeoutMS: 0,
-  shouldFocusAfterRender: true,
-  shouldCloseOnEsc: true,
-  shouldCloseOnOverlayClick: true,
-  shouldReturnFocusAfterClose: true,
-  preventScroll: false,
-  parentSelector: function parentSelector() {
-    return document.body;
-  },
-  overlayElement: function overlayElement(props, contentEl) {
-    return _react2.default.createElement("div", props, contentEl);
-  },
-  contentElement: function contentElement(props, children) {
-    return _react2.default.createElement("div", props, children);
-  }
-};
-Modal.defaultStyles = {
-  overlay: {
-    position: "fixed",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    backgroundColor: "rgba(255, 255, 255, 0.75)"
-  },
-  content: {
-    position: "absolute",
-    top: "40px",
-    left: "40px",
-    right: "40px",
-    bottom: "40px",
-    border: "1px solid #ccc",
-    background: "#fff",
-    overflow: "auto",
-    WebkitOverflowScrolling: "touch",
-    borderRadius: "4px",
-    outline: "none",
-    padding: "20px"
-  }
-};
-(0, _reactLifecyclesCompat.polyfill)(Modal);
-exports.default = Modal;
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","prop-types":"node_modules/prop-types/index.js","./ModalPortal":"node_modules/react-modal/lib/components/ModalPortal.js","../helpers/ariaAppHider":"node_modules/react-modal/lib/helpers/ariaAppHider.js","../helpers/safeHTMLElement":"node_modules/react-modal/lib/helpers/safeHTMLElement.js","react-lifecycles-compat":"node_modules/react-lifecycles-compat/react-lifecycles-compat.es.js"}],"node_modules/react-modal/lib/index.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _Modal = require("./components/Modal");
-
-var _Modal2 = _interopRequireDefault(_Modal);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    default: obj
-  };
-}
-
-exports.default = _Modal2.default;
-module.exports = exports["default"];
-},{"./components/Modal":"node_modules/react-modal/lib/components/Modal.js"}],"containers/pannelContainer.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-redux":"node_modules/react-redux/es/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../components":"components/index.js","../actions":"actions/index.js"}],"containers/modal.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -40593,25 +39493,43 @@ var _reactRedux = require("react-redux");
 
 var _actions = require("../actions");
 
-var _reactModal = _interopRequireDefault(require("react-modal"));
+var _components = require("../components");
+
+var _reactRouterDom = require("react-router-dom");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// const customStyles = {
-//   content : {
-//     top                   : '50%',
-//     left                  : '50%',
-//     right                 : 'auto',
-//     bottom                : 'auto',
-//     marginRight           : '-50%',
-//     transform             : 'translate(-50%, -50%)'
-//   }
-// };
-function PannelContainer({
+// import { Buttons } from '../components/trips/styles/trips';
+function ModalContainer({
   displayModal,
   Modal
 }) {
-  return /*#__PURE__*/_react.default.createElement("div", null, "I am a modal");
+  return /*#__PURE__*/_react.default.createElement(_components.ShowModal, {
+    onClick: () => {
+      if (displayModal) {
+        displayModal(false);
+      }
+    }
+  }, /*#__PURE__*/_react.default.createElement(_components.ShowModal.Wrapper, null, /*#__PURE__*/_react.default.createElement(_components.ShowModal.CloseButton, {
+    onClick: () => {
+      if (displayModal) {
+        displayModal(false);
+      }
+    }
+  }, "X"), /*#__PURE__*/_react.default.createElement(_components.ShowModal.Frame, null, /*#__PURE__*/_react.default.createElement(_components.ShowModal.Title, null, "Booking confirmed"), /*#__PURE__*/_react.default.createElement(_components.ShowModal.Logo, null, /*#__PURE__*/_react.default.createElement("svg", {
+    width: "71",
+    height: "71",
+    viewBox: "0 0 71 71",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/_react.default.createElement("path", {
+    fillRule: "evenodd",
+    clipRule: "evenodd",
+    d: "M18.9345 6.45604C21.789 6.22813 24.4988 5.10538 26.678 3.24768C29.1394 1.15133 32.2668 0 35.4999 0C38.733 0 41.8605 1.15133 44.3218 3.24768C46.501 5.10538 49.2109 6.22813 52.0654 6.45604C55.289 6.71367 58.3154 8.11109 60.6021 10.3978C62.8888 12.6845 64.2862 15.7109 64.5438 18.9345C64.7701 21.7878 65.8928 24.4992 67.7522 26.678C69.8485 29.1394 70.9998 32.2668 70.9998 35.4999C70.9998 38.733 69.8485 41.8605 67.7522 44.3218C65.8945 46.501 64.7717 49.2109 64.5438 52.0654C64.2862 55.289 62.8888 58.3154 60.6021 60.6021C58.3154 62.8888 55.289 64.2862 52.0654 64.5438C49.2109 64.7717 46.501 65.8945 44.3218 67.7522C41.8605 69.8485 38.733 70.9998 35.4999 70.9998C32.2668 70.9998 29.1394 69.8485 26.678 67.7522C24.4988 65.8945 21.789 64.7717 18.9345 64.5438C15.7109 64.2862 12.6845 62.8888 10.3978 60.6021C8.11109 58.3154 6.71367 55.289 6.45604 52.0654C6.22813 49.2109 5.10538 46.501 3.24768 44.3218C1.15133 41.8605 0 38.733 0 35.4999C0 32.2668 1.15133 29.1394 3.24768 26.678C5.10538 24.4988 6.22813 21.789 6.45604 18.9345C6.71367 15.7109 8.11109 12.6845 10.3978 10.3978C12.6845 8.11109 15.7109 6.71367 18.9345 6.45604ZM51.95 29.7621C52.7583 28.9252 53.2056 27.8043 53.1955 26.6408C53.1854 25.4772 52.7187 24.3642 51.8959 23.5415C51.0732 22.7187 49.9602 22.252 48.7967 22.2419C47.6331 22.2318 46.5122 22.6791 45.6753 23.4874L31.0624 38.1003L25.3246 32.3626C24.4876 31.5542 23.3667 31.1069 22.2032 31.1171C21.0397 31.1272 19.9267 31.5939 19.1039 32.4166C18.2812 33.2394 17.8145 34.3524 17.8043 35.5159C17.7942 36.6794 18.2415 37.8003 19.0499 38.6373L27.925 47.5124C28.7572 48.3443 29.8857 48.8117 31.0624 48.8117C32.239 48.8117 33.3675 48.3443 34.1997 47.5124L51.95 29.7621Z",
+    fill: "#FF8906"
+  })))), /*#__PURE__*/_react.default.createElement(_components.ShowModal.Text, null, "Thank you for trusting our services. Your booking has been added to your account. You can review it there."), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/userAccount"
+  }, /*#__PURE__*/_react.default.createElement(_components.Buttons, null, "Check your account"))));
 }
 
 function mapStateToProps(state) {
@@ -40624,10 +39542,57 @@ const mapToDispatch = {
   displayModal: _actions.displayModal
 };
 
-var _default = (0, _reactRedux.connect)(mapStateToProps, mapToDispatch)(PannelContainer);
+var _default = (0, _reactRedux.connect)(mapStateToProps, mapToDispatch)(ModalContainer);
 
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-redux":"node_modules/react-redux/es/index.js","../actions":"actions/index.js","react-modal":"node_modules/react-modal/lib/index.js"}],"pages/home.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-redux":"node_modules/react-redux/es/index.js","../actions":"actions/index.js","../components":"components/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"containers/header.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = headerContainer;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _components = require("../components");
+
+var _reactRouterDom = require("react-router-dom");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function headerContainer() {
+  return /*#__PURE__*/_react.default.createElement(_components.Header, null, /*#__PURE__*/_react.default.createElement(_components.Header.Wrapper, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/"
+  }, /*#__PURE__*/_react.default.createElement(_components.Header.Title, null, "Mahanoro station")), /*#__PURE__*/_react.default.createElement(_components.Header.Logo, null, /*#__PURE__*/_react.default.createElement("svg", {
+    width: "35",
+    height: "41",
+    viewBox: "0 0 35 41",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/_react.default.createElement("path", {
+    d: "M0 30.2105C0 32.1095 0.853125 33.8142 2.1875 35.0011V41H8.75V36.6842H26.25V41H32.8125V35.0011C34.1469 33.8142 35 32.1095 35 30.2105V8.63158C35 1.07895 27.1688 0 17.5 0C7.83125 0 0 1.07895 0 8.63158V30.2105ZM7.65625 32.3684C5.84062 32.3684 4.375 30.9226 4.375 29.1316C4.375 27.3405 5.84062 25.8947 7.65625 25.8947C9.47188 25.8947 10.9375 27.3405 10.9375 29.1316C10.9375 30.9226 9.47188 32.3684 7.65625 32.3684ZM27.3438 32.3684C25.5281 32.3684 24.0625 30.9226 24.0625 29.1316C24.0625 27.3405 25.5281 25.8947 27.3438 25.8947C29.1594 25.8947 30.625 27.3405 30.625 29.1316C30.625 30.9226 29.1594 32.3684 27.3438 32.3684ZM30.625 19.4211H4.375V8.63158H30.625V19.4211Z",
+    fill: "#FF8906"
+  })))), /*#__PURE__*/_react.default.createElement(_components.Header.Text, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/userAccount"
+  }, "My account")));
+}
+},{"react":"node_modules/react/index.js","../components":"components/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"containers/userAccount.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = userAccountContainer;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function userAccountContainer() {
+  return /*#__PURE__*/_react.default.createElement("div", null, "Uesr Account");
+}
+},{"react":"node_modules/react/index.js"}],"pages/home.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -40643,19 +39608,22 @@ var _trips = _interopRequireDefault(require("../containers/trips"));
 
 var _city = _interopRequireDefault(require("../containers/city"));
 
-var _pannelContainer = _interopRequireDefault(require("../containers/pannelContainer"));
-
 var _reactRouterDom = require("react-router-dom");
 
 var _reactRedux = require("react-redux");
 
+var _modal = _interopRequireDefault(require("../containers/modal"));
+
+var _header = _interopRequireDefault(require("../containers/header"));
+
+var _userAccount = _interopRequireDefault(require("../containers/userAccount"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import TripsContainer from '../containers/city';
 function home({
   Modal
 }) {
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_header.default, null), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/"
   }, /*#__PURE__*/_react.default.createElement(_cityItems.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
@@ -40664,7 +39632,10 @@ function home({
   }, /*#__PURE__*/_react.default.createElement(_trips.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/tripsContainer/:tripsId"
-  }, /*#__PURE__*/_react.default.createElement(_city.default, null))), Modal && /*#__PURE__*/_react.default.createElement(_pannelContainer.default, null));
+  }, /*#__PURE__*/_react.default.createElement(_city.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    exact: true,
+    path: "/userAccount"
+  }, /*#__PURE__*/_react.default.createElement(_userAccount.default, null))), Modal && /*#__PURE__*/_react.default.createElement(_modal.default, null));
 }
 
 function mapStateToProps(state) {
@@ -40676,7 +39647,38 @@ function mapStateToProps(state) {
 var _default = (0, _reactRedux.connect)(mapStateToProps)(home);
 
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../containers/cityItems":"containers/cityItems.js","../containers/trips":"containers/trips.js","../containers/city":"containers/city.js","../containers/pannelContainer":"containers/pannelContainer.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","react-redux":"node_modules/react-redux/es/index.js"}],"app.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../containers/cityItems":"containers/cityItems.js","../containers/trips":"containers/trips.js","../containers/city":"containers/city.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","react-redux":"node_modules/react-redux/es/index.js","../containers/modal":"containers/modal.js","../containers/header":"containers/header.js","../containers/userAccount":"containers/userAccount.js"}],"GlobalStyles.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.GlobalStyles = void 0;
+
+var _styledComponents = require("styled-components");
+
+const GlobalStyles = (0, _styledComponents.createGlobalStyle)`
+    html, body {
+        font-family: 'Roboto', Helvetica, sans-serif;
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+
+    fieldset {
+      margin: 0;
+      padding: 0;
+    }
+
+    button,
+    input {
+      cursor: pointer;
+
+    }
+  }
+
+`;
+exports.GlobalStyles = GlobalStyles;
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"app.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -40688,12 +39690,14 @@ var _react = _interopRequireDefault(require("react"));
 
 var _home = _interopRequireDefault(require("./pages/home"));
 
+var _GlobalStyles = require("./GlobalStyles");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_home.default, null));
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_GlobalStyles.GlobalStyles, null), /*#__PURE__*/_react.default.createElement(_home.default, null));
 }
-},{"react":"node_modules/react/index.js","./pages/home":"pages/home.js"}],"node_modules/redux-thunk/es/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./pages/home":"pages/home.js","./GlobalStyles":"GlobalStyles.js"}],"node_modules/redux-thunk/es/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -40881,7 +39885,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59689" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55467" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

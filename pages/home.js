@@ -2,30 +2,33 @@ import React from 'react';
 import CityItemsContainer from '../containers/cityItems';
 import TripsContainer from '../containers/trips';
 import CityContainer from '../containers/city';
-import PannelsContainer from '../containers/pannelContainer';
 import { Switch, Route, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-// import TripsContainer from '../containers/city';
-import PannelContainer from '../containers/pannelContainer';
+import ModalContainer from '../containers/modal';
+import HeaderContainer from '../containers/header';
+import UserAccountContainer from '../containers/userAccount';
 
 function home({Modal}) {
   return (
     <>
-    <Switch>
-      <Route exact path="/">
-        <CityItemsContainer></CityItemsContainer>
-      </Route>
-      <Route exact path='/cityItemsContainer/:destination'>
-         <TripsContainer />
-      </Route>
-      <Route exact path='/tripsContainer/:tripsId'>
-         <CityContainer />
-      </Route>
-    </Switch>
-    {/* <PannelsContainer /> */}
-    {Modal && <PannelContainer />}
-  </>
-  )
+      <HeaderContainer />
+      <Switch>
+        <Route exact path="/">
+          <CityItemsContainer></CityItemsContainer>
+        </Route>
+        <Route exact path='/cityItemsContainer/:destination'>
+          <TripsContainer />
+        </Route>
+        <Route exact path='/tripsContainer/:tripsId'>
+          <CityContainer />
+        </Route>
+        <Route exact path='/userAccount'>
+          <UserAccountContainer />
+        </Route>
+      </Switch>
+      {Modal && <ModalContainer />}
+    </>
+    )
 }
 
 function mapStateToProps(state){

@@ -1,38 +1,66 @@
-# Graded Project - Mahanoro Station
+# Mahanoro station
 
-![Design preview for the Mahanoro station coding challenge](./design/1.png)
+[Demo]()
+[solution]()
 
-## The challenge
+## Overview
 
-Your challenge is to build out this app and get it working with **redux**, **compound components** and **styled components**, while making it look as close to the design as possible.
+![screenshot1()
+![screenshot2](./)
 
-This is a website that will allow us to reserve some seats in _"Taxi brousses"_ departing from Mahanoro station.
+### Where can I see your demo?
+You can find my demo in Github.com by following the link that I wrote above.
 
-Your users should be able to:
+### What was your experience?
+I experienced that redux works similarly as context. I also experienced that having style component makes your life easier.
 
-- Pick a city from the city list
-- See the available trips to that city, and pick one where seats are still availalable
-- Select one or more seats in the car, and see how much it's going to cost
-- Confirm the booking
-- See their confirmed bookings on the 'My account'page
-- Modify their own information, like name or phone number, on that same page.
+### What have you learned/improved?
+I learned more how to work with style component and compound component which made me struggled a lot to understand before. I also learn more about redux which is a lesson thing for me. I still need to learn more about logic in redux because there are still a lot of thing that I am not really familiar with such as updating form in redux.
 
-## Where to find everything
+-   Your wisdom? :)
+I think it is really important to have clean and well named code.
 
-Your task is to build out the project to the designs from this Figma link: https://www.figma.com/file/6gSAJpaedebKAUuaM4ekFR/Mahanoro-Station?node-id=4%3A38
+### Built With
 
-The data from the trips are available on this link : https://gist.githubusercontent.com/Pinois/36bb5fbf9b6a686f0baf4006dd137bca/raw/a40d8b3f696a75f388db286d57bdd05a925fa0e7/trips.json
+- [React](https://reactjs.org/)
+- Style component
+- Redux
+- Compound components
+- React-router
 
-## Building your project
+### Features
+- I have a Header Components which contains the header contents
+- I have CityItems Components that displays the destinations
+- A reducer component
+- Action components that returns an object with property name and value
+- Buttons components that styles some of the buttons in the page
+- A Modal component that confirm the booking
+- A Trips components that display the destination details
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+### How To Use
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). This will make it easier to share your code with the community if you need some help. If you're not sure how to do this, [have a read through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a URL. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, but I recommend you to use **Netlify**.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead how your data and reducers will look like.
+<!-- Example: -->
 
-## Submit your project
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
-You have until **Tuesday** at **15h30** to submit your github link and netlify link on this form : https://forms.gle/ikBWC2MokmdH4jdw6
+```bash
+# Clone this repository
+$ git clone https://github.com/your-user-name/your-project-name
 
-**Have fun building!** 🚀
+# Install dependencies
+$ npm install
+-	React
+-	React-redux
+-	React-router-dom
+-
+
+# Run the app
+$ npm start
+```
+
+## Contact
+
+-   Website [netlify.com]()
+-   GitHub [@ravinalamada]()
+
+

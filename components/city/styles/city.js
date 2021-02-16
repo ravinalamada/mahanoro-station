@@ -37,7 +37,7 @@ export const Contact = styled.p``;
 export const Logo = styled.span``;
 export const Buttons = styled.button`
   border-color: transparent;
-  background-color:linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(360deg, #FFAC33 117.76%, rgba(255, 255, 255, 0) 187.45%);
+  background:linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(360deg, #FFAC33 117.76%, rgba(255, 255, 255, 0) 187.45%);
 `;
 export const Name = styled.p``;
 export const Price = styled.p``;

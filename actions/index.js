@@ -42,3 +42,10 @@ export function removeCartItems(seatId) {
     value: seatId
   }
 }
+
+ export function setUserAccount(userId) {
+  return {
+    type: 'SET_USER_ACCOUNT',
+    value: userId,
+  }
+}
