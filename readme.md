@@ -1,12 +1,12 @@
 # Mahanoro station
 
 [Demo](https://mahanoro-station-prisca.netlify.app/)
-[solution]()
+[solution](https://github.com/ravinalamada/mahanoro-station)
 
 ## Overview
 
-![screenshot1()
-![screenshot2](./)
+![screenshot1](./images/mobile-image.png)
+![screenshot2](./images/desk-images.png)
 
 ### Where can I see your demo?
 You can find my demo in Github.com by following the link that I wrote above.
@@ -60,7 +60,7 @@ $ npm start
 
 ## Contact
 
--   Website [netlify.com]()
--   GitHub [@ravinalamada]()
+-   Website [netlify.com](https://mahanoro-station-prisca.netlify.app/)
+-   GitHub [@ravinalamada](https://github.com/ravinalamada/mahanoro-station)
 
 

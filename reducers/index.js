@@ -60,7 +60,7 @@ function destination(state=cityInitialisation, action) {
 }
 
 // Take a new booked seat data
-function cartItems(state=userData, action) {
+function cartItems(state=[], action) {
   switch (action.type) {
     case 'SET_CART_ITEMS':
       return [...state, action.value]

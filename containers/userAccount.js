@@ -1,9 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import { Masthead, UserAccount} from '../components';
+import {removeCartItems} from '../actions';
 import FormContainer from '../containers/form';
 
- function userAccountContainer({cartItems}) {
+ function userAccountContainer({cartItems, removeCartItems}) {
 
   const mappedCartItems = cartItems.length !== 0 && cartItems.map(cart => (<span>{cart.driverName}</span>))
   return (
@@ -98,4 +99,4 @@ import FormContainer from '../containers/form';
   )
 }
 
-export default connect((state) => ({cartItems: state.cartItems}))(userAccountContainer)
+export default connect((state) => ({cartItems: state.cartItems}), {removeCartItems})(userAccountContainer)

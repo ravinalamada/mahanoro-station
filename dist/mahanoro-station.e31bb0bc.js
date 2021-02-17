@@ -39996,12 +39996,15 @@ var _reactRedux = require("react-redux");
 
 var _components = require("../components");
 
+var _actions = require("../actions");
+
 var _form = _interopRequireDefault(require("../containers/form"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function userAccountContainer({
-  cartItems
+  cartItems,
+  removeCartItems
 }) {
   const mappedCartItems = cartItems.length !== 0 && cartItems.map(cart => /*#__PURE__*/_react.default.createElement("span", null, cart.driverName));
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_components.Masthead, null, /*#__PURE__*/_react.default.createElement(_components.Masthead.Wrapper, null, /*#__PURE__*/_react.default.createElement(_components.Masthead.Title, null, "My account:", mappedCartItems), /*#__PURE__*/_react.default.createElement(_components.Masthead.Logo, null, /*#__PURE__*/_react.default.createElement("svg", {
@@ -40123,10 +40126,12 @@ function userAccountContainer({
 
 var _default = (0, _reactRedux.connect)(state => ({
   cartItems: state.cartItems
-}))(userAccountContainer);
+}), {
+  removeCartItems: _actions.removeCartItems
+})(userAccountContainer);
 
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-redux":"node_modules/react-redux/es/index.js","../components":"components/index.js","../containers/form":"containers/form.js"}],"pages/home.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-redux":"node_modules/react-redux/es/index.js","../components":"components/index.js","../actions":"actions/index.js","../containers/form":"containers/form.js"}],"pages/home.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -40341,7 +40346,7 @@ function destination(state = cityInitialisation, action) {
 } // Take a new booked seat data
 
 
-function cartItems(state = userData, action) {
+function cartItems(state = [], action) {
   switch (action.type) {
     case 'SET_CART_ITEMS':
       return [...state, action.value];
@@ -40481,7 +40486,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53785" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53853" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
