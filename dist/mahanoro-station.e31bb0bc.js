@@ -38577,7 +38577,7 @@ Trips.Logo = function TripsLogo({
 }) {
   return /*#__PURE__*/_react.default.createElement(_trips.Logo, restProps, children);
 };
-},{"react":"node_modules/react/index.js","./styles/trips":"components/trips/styles/trips.js"}],"components/city/styles/City.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./styles/trips":"components/trips/styles/trips.js"}],"components/destinationDetails/styles/destinationsDetails.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38644,118 +38644,118 @@ const Breaks = _styledComponents.default.p``;
 exports.Breaks = Breaks;
 const EstimatedDuration = _styledComponents.default.p``;
 exports.EstimatedDuration = EstimatedDuration;
-},{"react-redux":"node_modules/react-redux/es/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/city/index.js":[function(require,module,exports) {
+},{"react-redux":"node_modules/react-redux/es/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/destinationDetails/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = City;
+exports.default = DestinationsDetails;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _City = require("./styles/City");
+var _destinationsDetails = require("./styles/destinationsDetails");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function City({
+function DestinationsDetails({
   children,
   ...restProps
 }) {
-  return /*#__PURE__*/_react.default.createElement(_City.Container, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_destinationsDetails.Container, restProps, children);
 }
 
-City.Frame = function CityFrame({
+DestinationsDetails.Frame = function DestinationsDetailsFrame({
   children,
   ...restProps
 }) {
-  return /*#__PURE__*/_react.default.createElement(_City.Frame, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_destinationsDetails.Frame, restProps, children);
 };
 
-City.Wrapper = function CityWrapper({
+DestinationsDetails.Wrapper = function DestinationsDetailsWrapper({
   children,
   ...restProps
 }) {
-  return /*#__PURE__*/_react.default.createElement(_City.Wrapper, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_destinationsDetails.Wrapper, restProps, children);
 };
 
-City.Buttons = function CityButtons({
+DestinationsDetails.Buttons = function DestinationsDetailsButtons({
   children,
   ...restProps
 }) {
-  return /*#__PURE__*/_react.default.createElement(_City.Buttons, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_destinationsDetails.Buttons, restProps, children);
 };
 
-City.DepartureTime = function CityDepartureTime({
+DestinationsDetails.DepartureTime = function DestinationsDetailsDepartureTime({
   children,
   ...restProps
 }) {
-  return /*#__PURE__*/_react.default.createElement(_City.DepartureTime, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_destinationsDetails.DepartureTime, restProps, children);
 };
 
-City.Price = function CityPrice({
+DestinationsDetails.Price = function DestinationsDetailsPrice({
   children,
   ...restProps
 }) {
-  return /*#__PURE__*/_react.default.createElement(_City.Price, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_destinationsDetails.Price, restProps, children);
 };
 
-City.RedBgButtons = function CityRedBgButtons({
+DestinationsDetails.RedBgButtons = function DestinationsDetailsRedBgButtons({
   children,
   ...restProps
 }) {
-  return /*#__PURE__*/_react.default.createElement(_City.RedBgButtons, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_destinationsDetails.RedBgButtons, restProps, children);
 };
 
-City.DefaultBgButtons = function CityDefaultBgButtons({
+DestinationsDetails.DefaultBgButtons = function DestinationsDetailsDefaultBgButtons({
   children,
   ...restProps
 }) {
-  return /*#__PURE__*/_react.default.createElement(_City.DefaultBgButtons, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_destinationsDetails.DefaultBgButtons, restProps, children);
 };
 
-City.Name = function CityName({
+DestinationsDetails.Name = function DestinationsDetailsName({
   children,
   ...restProps
 }) {
-  return /*#__PURE__*/_react.default.createElement(_City.Name, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_destinationsDetails.Name, restProps, children);
 };
 
-City.Seats = function CitySeats({
+DestinationsDetails.Seats = function DestinationsDetailsSeats({
   children,
   ...restProps
 }) {
-  return /*#__PURE__*/_react.default.createElement(_City.Seats, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_destinationsDetails.Seats, restProps, children);
 };
 
-City.Contact = function CityContact({
+DestinationsDetails.Contact = function DestinationsDetailsContact({
   children,
   ...restProps
 }) {
-  return /*#__PURE__*/_react.default.createElement(_City.Contact, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_destinationsDetails.Contact, restProps, children);
 };
 
-City.Logo = function CityLogo({
+DestinationsDetails.Logo = function DestinationsDetailsLogo({
   children,
   ...restProps
 }) {
-  return /*#__PURE__*/_react.default.createElement(_City.Logo, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_destinationsDetails.Logo, restProps, children);
 };
 
-City.Breaks = function CityBreaks({
+DestinationsDetails.Breaks = function DestinationsDetailsBreaks({
   children,
   ...restProps
 }) {
-  return /*#__PURE__*/_react.default.createElement(_City.Breaks, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_destinationsDetails.Breaks, restProps, children);
 };
 
-City.EstimatedDuration = function CityEstimatedDuration({
+DestinationsDetails.EstimatedDuration = function DestinationsDetailsEstimatedDuration({
   children,
   ...restProps
 }) {
-  return /*#__PURE__*/_react.default.createElement(_City.EstimatedDuration, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_destinationsDetails.EstimatedDuration, restProps, children);
 };
-},{"react":"node_modules/react/index.js","./styles/City":"components/city/styles/City.js"}],"components/buttons/styles/buttons.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./styles/destinationsDetails":"components/destinationDetails/styles/destinationsDetails.js"}],"components/buttons/styles/buttons.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38773,10 +38773,7 @@ const Container = _styledComponents.default.button`
   font-size: 20px;
   line-height: 43px;
   color: #FFFFFF;
-  padding-top: 5px;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 5px;
+  width: max-content;
   border-color: transparent;
  `;
 exports.Container = Container;
@@ -38800,7 +38797,289 @@ function Buttons({
 }) {
   return /*#__PURE__*/_react.default.createElement(_buttons.Container, restProps, children);
 }
-},{"react":"node_modules/react/index.js","./styles/buttons":"components/buttons/styles/buttons.js"}],"components/modal/styles/modal.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./styles/buttons":"components/buttons/styles/buttons.js"}],"components/form/styles/form.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Label = exports.Input = exports.Fieldset = exports.Base = exports.Title = exports.Wrapper = exports.Container = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const Container = _styledComponents.default.div`
+
+`;
+exports.Container = Container;
+const Wrapper = _styledComponents.default.div`
+  width: 100%;
+  text-align: right;
+  margin-block-end: 2rem;
+`;
+exports.Wrapper = Wrapper;
+const Title = _styledComponents.default.h3`
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #0F0E17;
+  padding-left: 20px;
+`;
+exports.Title = Title;
+const Base = _styledComponents.default.form`
+  display: grid;
+	grid-template-columns: 300px;
+	gap: 10px;
+`;
+exports.Base = Base;
+const Fieldset = _styledComponents.default.fieldset`
+  height: 100px;
+  border: none;
+  padding: 0 1rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`;
+exports.Fieldset = Fieldset;
+const Input = _styledComponents.default.input`
+  border: none;
+  width: 100%;
+  font-weight: 500;
+  background: #000000;
+  font-size: 24px;
+  line-height: 28px;
+  color: #FF8906;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  padding-left: 20px;
+
+`;
+exports.Input = Input;
+const Label = _styledComponents.default.label`
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #0F0E17;
+
+`;
+exports.Label = Label;
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/form/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Form;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _form = require("./styles/form");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Form({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_form.Container, restProps, children);
+}
+
+Form.Base = function formBase({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_form.Base, restProps, children);
+};
+
+Form.Wrapper = function formWrapper({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_form.Wrapper, restProps, children);
+};
+
+Form.Title = function formTitle({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_form.Title, restProps, children);
+};
+
+Form.Fieldset = function formFieldset({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_form.Fieldset, restProps, children);
+};
+
+Form.Input = function formInput({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_form.Input, restProps, children);
+};
+
+Form.Label = function formLabel({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_form.Label, restProps, children);
+};
+},{"react":"node_modules/react/index.js","./styles/form":"components/form/styles/form.js"}],"components/userAccount/styles/userAccount.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Buttons = exports.Logo = exports.Items = exports.Text = exports.Title = exports.List = exports.Wrapper = exports.Container = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const Container = _styledComponents.default.div`
+  display: flex;
+  flex-direction: row;
+  gap: 82px;
+  align-items: flex-start;
+
+  @media(min-width: 700px) {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+`;
+exports.Container = Container;
+const Wrapper = _styledComponents.default.div`
+  display: flex;
+  flex-direction: column;
+`;
+exports.Wrapper = Wrapper;
+const List = _styledComponents.default.ul`
+  margin: 0;
+  padding: 0;
+`;
+exports.List = List;
+const Title = _styledComponents.default.h3`
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #0F0E17;
+
+`;
+exports.Title = Title;
+const Text = _styledComponents.default.p`
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 19px;
+  color: #000000;
+`;
+exports.Text = Text;
+const Items = _styledComponents.default.li`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  column-gap: 25px;
+`;
+exports.Items = Items;
+const Logo = _styledComponents.default.span`
+  flex-basis: calc(calc(100% / 4) - 20px);
+
+  svg {
+    width: 72px;
+    height: 72px;
+  }
+`;
+exports.Logo = Logo;
+const Buttons = _styledComponents.default.button`
+  background: #FF8906;
+  width: max-content;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px;
+`;
+exports.Buttons = Buttons;
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"components/userAccount/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = UserAccount;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _userAccount = require("./styles/userAccount");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function UserAccount({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_userAccount.Container, restProps, children);
+}
+
+UserAccount.List = function userAccountList({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_userAccount.List, restProps, children);
+};
+
+UserAccount.Items = function userAccountItems({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_userAccount.Items, restProps, children);
+};
+
+UserAccount.Title = function userAccountTitle({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_userAccount.Title, restProps, children);
+};
+
+UserAccount.Wrapper = function userAccountWrapper({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_userAccount.Wrapper, restProps, children);
+};
+
+UserAccount.Text = function userAccountText({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_userAccount.Text, restProps, children);
+};
+
+UserAccount.Logo = function userAccountLogo({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_userAccount.Logo, restProps, children);
+};
+
+UserAccount.Buttons = function userAccountButtons({
+  children,
+  ...restProps
+}) {
+  return /*#__PURE__*/_react.default.createElement(_userAccount.Buttons, restProps, children);
+};
+},{"react":"node_modules/react/index.js","./styles/userAccount":"components/userAccount/styles/userAccount.js"}],"components/modal/styles/modal.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38991,16 +39270,28 @@ Object.defineProperty(exports, "Trips", {
     return _trips.default;
   }
 });
-Object.defineProperty(exports, "City", {
+Object.defineProperty(exports, "DestinationDetails", {
   enumerable: true,
   get: function () {
-    return _city.default;
+    return _destinationDetails.default;
   }
 });
 Object.defineProperty(exports, "Buttons", {
   enumerable: true,
   get: function () {
     return _buttons.default;
+  }
+});
+Object.defineProperty(exports, "Form", {
+  enumerable: true,
+  get: function () {
+    return _form.default;
+  }
+});
+Object.defineProperty(exports, "UserAccount", {
+  enumerable: true,
+  get: function () {
+    return _userAccount.default;
   }
 });
 Object.defineProperty(exports, "ShowModal", {
@@ -39020,14 +39311,18 @@ var _cityItems = _interopRequireDefault(require("./cityItems"));
 
 var _trips = _interopRequireDefault(require("./trips"));
 
-var _city = _interopRequireDefault(require("./city"));
+var _destinationDetails = _interopRequireDefault(require("./destinationDetails"));
 
 var _buttons = _interopRequireDefault(require("./buttons"));
+
+var _form = _interopRequireDefault(require("./form"));
+
+var _userAccount = _interopRequireDefault(require("./userAccount"));
 
 var _modal = _interopRequireDefault(require("./modal"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./header":"components/header/index.js","./masthead":"components/masthead/index.js","./cityList":"components/cityList/index.js","./cityItems":"components/cityItems/index.js","./trips":"components/trips/index.js","./city":"components/city/index.js","./buttons":"components/buttons/index.js","./modal":"components/modal/index.js"}],"containers/cityItems.js":[function(require,module,exports) {
+},{"./header":"components/header/index.js","./masthead":"components/masthead/index.js","./cityList":"components/cityList/index.js","./cityItems":"components/cityItems/index.js","./trips":"components/trips/index.js","./destinationDetails":"components/destinationDetails/index.js","./buttons":"components/buttons/index.js","./form":"components/form/index.js","./userAccount":"components/userAccount/index.js","./modal":"components/modal/index.js"}],"containers/cityItems.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -39150,11 +39445,15 @@ exports.addToCart = addToCart;
 exports.displayModal = displayModal;
 exports.removeCartItems = removeCartItems;
 exports.setUserAccount = setUserAccount;
+exports.setFirstName = setFirstName;
+exports.setNumber = setNumber;
+exports.setLastName = setLastName;
+exports.uptadeSeat = uptadeSeat;
+const API_DATA = `https://gist.githubusercontent.com/Pinois/36bb5fbf9b6a686f0baf4006dd137bca/raw/a40d8b3f696a75f388db286d57bdd05a925fa0e7/trips.json`; // Get data from API
 
-// const API_DATA= ``;
 function getCity() {
   return async dispatch => {
-    const response = await fetch(`https://gist.githubusercontent.com/Pinois/36bb5fbf9b6a686f0baf4006dd137bca/raw/a40d8b3f696a75f388db286d57bdd05a925fa0e7/trips.json`);
+    const response = await fetch(API_DATA);
     const city = await response.json();
     dispatch({
       type: 'GET_CITY',
@@ -39203,7 +39502,35 @@ function setUserAccount(userId) {
     value: userId
   };
 }
-},{}],"containers/trips.js":[function(require,module,exports) {
+
+function setFirstName(thing) {
+  return {
+    type: 'SET_FISRTNAME',
+    value: thing
+  };
+}
+
+function setNumber(thing) {
+  return {
+    type: 'SET_NUMBER',
+    value: thing
+  };
+}
+
+function setLastName(thing) {
+  return {
+    type: 'SET_LASTNAME',
+    value: thing
+  };
+}
+
+function uptadeSeat(thing) {
+  return {
+    type: ' UPDATE_SEAT',
+    value: thing
+  };
+}
+},{}],"containers/departureTimeDetails.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -39252,7 +39579,7 @@ function TripsContainer({
 
     var dayName = days[day.getDay() + i]; // Get Full Date
 
-    var fullDate = new Date(1613480400).toLocaleDateString("en-US");
+    var fullDate = day.toLocaleDateString("en-US");
     return /*#__PURE__*/_react.default.createElement(_components.Trips, {
       key: city.id
     }, /*#__PURE__*/_react.default.createElement(_components.Trips.Frame, null, /*#__PURE__*/_react.default.createElement(_components.Trips.Logo, null)), /*#__PURE__*/_react.default.createElement(_components.Trips.Frame, null, /*#__PURE__*/_react.default.createElement(_components.Trips.Day, null, dayName), /*#__PURE__*/_react.default.createElement(_components.Trips.Hours, null, hours, ":", minutes)), /*#__PURE__*/_react.default.createElement(_components.Trips.Frame, null, /*#__PURE__*/_react.default.createElement(_components.Trips.Date, null, fullDate), /*#__PURE__*/_react.default.createElement(_components.Trips.Seats, null, availlableSeat.length, " seats left")), /*#__PURE__*/_react.default.createElement(_components.Trips.Frame, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
@@ -39373,7 +39700,7 @@ function CityContainer({
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg"
       }, /*#__PURE__*/_react.default.createElement("g", {
-        "clip-path": "url(#clip0)"
+        clipPath: "url(#clip0)"
       }, /*#__PURE__*/_react.default.createElement("path", {
         d: "M51.7413 30.7563C51.9281 32.8112 50.527 34.4924 48.5656 34.4924H12.8864C10.925 34.4924 9.52399 32.8112 9.71079 30.7563L11.6722 10.0213C11.859 7.9665 13.6336 6.28528 15.5951 6.28528H45.857C47.8184 6.28528 49.593 7.9665 49.7798 10.0213L51.7413 30.7563Z",
         fill: "#B4D7EE"
@@ -39418,11 +39745,11 @@ function CityContainer({
         y2: "59.7766",
         gradientUnits: "userSpaceOnUse"
       }, /*#__PURE__*/_react.default.createElement("stop", {
-        "stop-color": "white"
+        stopColor: "white"
       }), /*#__PURE__*/_react.default.createElement("stop", {
         offset: "1",
-        "stop-color": "white",
-        "stop-opacity": "0"
+        stopColor: "white",
+        stopOpacity: "0"
       })), /*#__PURE__*/_react.default.createElement("clipPath", {
         id: "clip0"
       }, /*#__PURE__*/_react.default.createElement("rect", {
@@ -39433,7 +39760,7 @@ function CityContainer({
       })))));
     }
 
-    if (isAlreadyInCart === true) {
+    if (seat.isAvailable === false) {
       return /*#__PURE__*/_react.default.createElement(_components.City.Buttons, {
         key: seat.id,
         onClick: () => removeCartItems(findCityById)
@@ -39577,22 +39904,229 @@ function headerContainer() {
     to: "/userAccount"
   }, "My account")));
 }
-},{"react":"node_modules/react/index.js","../components":"components/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"containers/userAccount.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../components":"components/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"containers/form.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = userAccountContainer;
+exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _reactRedux = require("react-redux");
+
+var _components = require("../components");
+
+var _actions = require("../actions");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function userAccountContainer() {
-  return /*#__PURE__*/_react.default.createElement("div", null, "Uesr Account");
+function formContainer({
+  setNumber,
+  setLastName,
+  setFirstName,
+  uptadeSeat,
+  passengerFirstName,
+  passengerLastName,
+  passengerPhoneNumber
+}) {
+  function handleUdpatedSeats(e) {
+    e.preventDefault();
+    const seats = {
+      id: Date.now(),
+      passengerFirstName: passengerFirstName,
+      passengerLastName: passengerLastName,
+      passengerPhoneNumber: passengerPhoneNumber
+    };
+    uptadeSeat(seats);
+  }
+
+  return /*#__PURE__*/_react.default.createElement(_components.Form, {
+    onClick: handleUdpatedSeats
+  }, /*#__PURE__*/_react.default.createElement(_components.Form.Title, null, "My personnal informations:"), /*#__PURE__*/_react.default.createElement(_components.Form.Base, null, /*#__PURE__*/_react.default.createElement(_components.Form.Fieldset, null, /*#__PURE__*/_react.default.createElement(_components.Form.Label, null, "First name"), /*#__PURE__*/_react.default.createElement(_components.Form.Input, {
+    type: "text",
+    placeholder: passengerFirstName,
+    value: passengerFirstName,
+    onChange: e => setFirstName(e.target.value),
+    required: true
+  })), /*#__PURE__*/_react.default.createElement(_components.Form.Fieldset, null, /*#__PURE__*/_react.default.createElement(_components.Form.Label, null, "Last name"), /*#__PURE__*/_react.default.createElement(_components.Form.Input, {
+    type: "text",
+    placeholder: passengerLastName,
+    value: passengerLastName,
+    onChange: e => setLastName(e.target.value),
+    required: true
+  })), /*#__PURE__*/_react.default.createElement(_components.Form.Fieldset, null, /*#__PURE__*/_react.default.createElement(_components.Form.Label, null, "Phone number"), /*#__PURE__*/_react.default.createElement(_components.Form.Input, {
+    type: "tel",
+    placeholder: passengerPhoneNumber,
+    value: passengerPhoneNumber,
+    onChange: e => setNumber(e.target.value)
+  })), /*#__PURE__*/_react.default.createElement(_components.Form.Wrapper, null, /*#__PURE__*/_react.default.createElement(_components.Buttons, null, "Update"))));
 }
-},{"react":"node_modules/react/index.js"}],"pages/home.js":[function(require,module,exports) {
+
+const mapToDispatch = {
+  setNumber: _actions.setNumber,
+  setLastName: _actions.setLastName,
+  setFirstName: _actions.setFirstName,
+  uptadeSeat: _actions.uptadeSeat
+};
+
+function mapStateToProps(state) {
+  return {
+    passengerFirstName: state.updatedSeat.passengerFirstName,
+    passengerLastName: state.updatedSeat.passengerLastName,
+    passengerPhoneNumber: state.updatedSeat.passengerPhoneNumber
+  };
+}
+
+var _default = (0, _reactRedux.connect)(mapStateToProps, mapToDispatch)(formContainer);
+
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-redux":"node_modules/react-redux/es/index.js","../components":"components/index.js","../actions":"actions/index.js"}],"containers/userAccount.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRedux = require("react-redux");
+
+var _components = require("../components");
+
+var _form = _interopRequireDefault(require("../containers/form"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function userAccountContainer({
+  cartItems
+}) {
+  const mappedCartItems = cartItems.length !== 0 && cartItems.map(cart => /*#__PURE__*/_react.default.createElement("span", null, cart.driverName));
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_components.Masthead, null, /*#__PURE__*/_react.default.createElement(_components.Masthead.Wrapper, null, /*#__PURE__*/_react.default.createElement(_components.Masthead.Title, null, "My account:", mappedCartItems), /*#__PURE__*/_react.default.createElement(_components.Masthead.Logo, null, /*#__PURE__*/_react.default.createElement("svg", {
+    width: "134",
+    height: "134",
+    viewBox: "0 0 134 134",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/_react.default.createElement("path", {
+    d: "M5.36 0H128.64C130.062 0 131.425 0.564713 132.43 1.56991C133.435 2.5751 134 3.93844 134 5.36V128.64C134 130.062 133.435 131.425 132.43 132.43C131.425 133.435 130.062 134 128.64 134H5.36C3.93844 134 2.5751 133.435 1.56991 132.43C0.564713 131.425 0 130.062 0 128.64V5.36C0 3.93844 0.564713 2.5751 1.56991 1.56991C2.5751 0.564713 3.93844 0 5.36 0V0Z",
+    fill: "#EBEDEE"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M13.3999 26.8H120.6V120.6H13.3999V26.8Z",
+    fill: "white"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M17.4199 9.38C18.4861 9.38 19.5086 9.80354 20.2625 10.5574C21.0164 11.3113 21.4399 12.3338 21.4399 13.4C21.4399 14.4662 21.0164 15.4887 20.2625 16.2426C19.5086 16.9965 18.4861 17.42 17.4199 17.42C16.3537 17.42 15.3312 16.9965 14.5773 16.2426C13.8234 15.4887 13.3999 14.4662 13.3999 13.4C13.3999 12.3338 13.8234 11.3113 14.5773 10.5574C15.3312 9.80354 16.3537 9.38 17.4199 9.38Z",
+    fill: "#E74C3C"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M30.8198 9.38C31.886 9.38 32.9085 9.80354 33.6624 10.5574C34.4163 11.3113 34.8398 12.3338 34.8398 13.4C34.8398 14.4662 34.4163 15.4887 33.6624 16.2426C32.9085 16.9965 31.886 17.42 30.8198 17.42C29.7536 17.42 28.7311 16.9965 27.9772 16.2426C27.2233 15.4887 26.7998 14.4662 26.7998 13.4C26.7998 12.3338 27.2233 11.3113 27.9772 10.5574C28.7311 9.80354 29.7536 9.38 30.8198 9.38Z",
+    fill: "#F39C12"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M44.2202 9.38C45.2864 9.38 46.3089 9.80354 47.0628 10.5574C47.8167 11.3113 48.2402 12.3338 48.2402 13.4C48.2402 14.4662 47.8167 15.4887 47.0628 16.2426C46.3089 16.9965 45.2864 17.42 44.2202 17.42C43.154 17.42 42.1315 16.9965 41.3776 16.2426C40.6237 15.4887 40.2002 14.4662 40.2002 13.4C40.2002 12.3338 40.6237 11.3113 41.3776 10.5574C42.1315 9.80354 43.154 9.38 44.2202 9.38Z",
+    fill: "#17A085"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M60.2998 9.38H120.6V17.42H60.2998V9.38Z",
+    fill: "white"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M26.7998 60.3V67H60.2998V60.3H26.7998ZM26.7998 80.4H60.2998V73.7H26.7998V80.4ZM26.7998 93.8H60.2998V87.1H26.7998V93.8ZM26.7998 107.2H60.2998V100.5H26.7998V107.2Z",
+    fill: "#BDC3C7"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M26.7998 40.2H107.2V53.6H26.7998V40.2Z",
+    fill: "#FF8906"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M67 60.3V80.4H107.2V60.3H67ZM67 107.2H107.2V87.1H67V107.2Z",
+    fill: "#BDC3C7"
+  }))))), /*#__PURE__*/_react.default.createElement(_components.UserAccount, null, /*#__PURE__*/_react.default.createElement(_components.UserAccount.Wrapper, null, /*#__PURE__*/_react.default.createElement(_form.default, null)), /*#__PURE__*/_react.default.createElement(_components.UserAccount.Wrapper, null, /*#__PURE__*/_react.default.createElement(_components.UserAccount.List, null, /*#__PURE__*/_react.default.createElement(_components.UserAccount.Title, null, "My bookings:"), cartItems.length !== 0 && cartItems.map((cart, i) => {
+    const date = new Date(cart.departureTime * 1000); // Hours part from the timestamp
+
+    var hours = date.getHours(); // Minutes part from the timestamp
+
+    var minutes = "0" + date.getMinutes(); // Get Full Date
+
+    var fullDate = new Date(cart.departureTime).toLocaleDateString("en-US");
+    return /*#__PURE__*/_react.default.createElement(_components.UserAccount.Items, {
+      key: cart.id + i
+    }, /*#__PURE__*/_react.default.createElement(_components.UserAccount.Logo, null, /*#__PURE__*/_react.default.createElement("svg", {
+      width: "128",
+      height: "128",
+      viewBox: "0 0 128 128",
+      fill: "none",
+      xmlns: "http://www.w3.org/2000/svg"
+    }, /*#__PURE__*/_react.default.createElement("g", {
+      clipPath: "url(#clip0)"
+    }, /*#__PURE__*/_react.default.createElement("path", {
+      d: "M117.13 87.29C117.13 94.64 115.07 100.59 112.55 100.59C110.02 100.59 107.97 94.64 107.97 87.29C107.97 79.94 110.02 73.98 112.55 73.98C115.07 73.98 117.13 79.95 117.13 87.29Z",
+      fill: "#2F2F2F"
+    }), /*#__PURE__*/_react.default.createElement("path", {
+      d: "M110.56 99.28C110.56 99.28 111.78 101.23 113.1 101.89C116.09 103.38 120.25 102.83 122.75 99.43L121.41 91.33L112.95 92.94L110.56 99.28Z",
+      fill: "#2F2F2F"
+    }), /*#__PURE__*/_react.default.createElement("path", {
+      d: "M23.71 104.14C23.71 111.99 20.94 118.36 17.54 118.36C14.13 118.36 11.36 111.99 11.36 104.14C11.36 96.28 14.13 89.91 17.54 89.91C20.94 89.92 23.71 96.28 23.71 104.14Z",
+      fill: "#2F2F2F"
+    }), /*#__PURE__*/_react.default.createElement("path", {
+      d: "M14.85 116.97C14.85 116.97 16.49 119.06 18.29 119.76C22.32 121.35 27.92 120.76 31.29 117.14L29.48 108.48L18.08 110.2L14.85 116.97Z",
+      fill: "#2F2F2F"
+    }), /*#__PURE__*/_react.default.createElement("path", {
+      d: "M34.95 104.14C34.95 111.99 32.18 118.36 28.78 118.36C25.37 118.36 22.6 111.99 22.6 104.14C22.6 96.28 25.37 89.91 28.78 89.91C32.18 89.92 34.95 96.28 34.95 104.14Z",
+      fill: "#2F2F2F"
+    }), /*#__PURE__*/_react.default.createElement("path", {
+      d: "M90.78 104.14C90.78 111.99 88.01 118.36 84.61 118.36C81.2 118.36 78.43 111.99 78.43 104.14C78.43 96.28 81.2 89.91 84.61 89.91C88.01 89.92 90.78 96.28 90.78 104.14Z",
+      fill: "#2F2F2F"
+    }), /*#__PURE__*/_react.default.createElement("path", {
+      d: "M81.92 116.97C81.92 116.97 83.56 119.06 85.36 119.76C89.39 121.35 94.99 120.76 98.37 117.14L96.56 108.48L85.16 110.2L81.92 116.97Z",
+      fill: "#2F2F2F"
+    }), /*#__PURE__*/_react.default.createElement("path", {
+      d: "M114 12.21H17.31C7.28 12.21 0.160004 18.34 0.160004 27.36V91.7C0.160004 101.72 8.29 109.85 18.31 109.85H73.98C88.6 109.85 93.38 107.96 102.32 102.07C111.51 96.02 128 86.02 128 77.82V27.27C128 17.25 124.02 12.21 114 12.21Z",
+      fill: "#FCC21B"
+    }), /*#__PURE__*/_react.default.createElement("path", {
+      d: "M-0.380005 82.07H85.95V111.5H-0.380005V82.07Z",
+      fill: "#ED6C30"
+    }), /*#__PURE__*/_react.default.createElement("path", {
+      d: "M85.95 117.59L131.32 87.94V54.85L85.95 82.07V117.59Z",
+      fill: "#ED6C30"
+    }), /*#__PURE__*/_react.default.createElement("path", {
+      d: "M80.11 67.23C80.11 70.59 77.38 73.33 74.01 73.33H15.41C12.05 73.33 9.31998 70.59 9.31998 67.23V28.49C9.31998 25.13 12.05 22.39 15.41 22.39H74C77.37 22.39 80.1 25.13 80.1 28.49V67.23H80.11Z",
+      fill: "#40C0E7"
+    }), /*#__PURE__*/_react.default.createElement("path", {
+      d: "M6.60999 20.04H83.61V37.92H6.60999V20.04Z",
+      fill: "#2F2F2F"
+    }), /*#__PURE__*/_react.default.createElement("path", {
+      d: "M20.24 25.96H69.97V34.06H20.24V25.96Z",
+      fill: "white"
+    }), /*#__PURE__*/_react.default.createElement("path", {
+      d: "M108.42 48.97C108.42 51.57 106.9 54.53 104.91 55.66L97.5 59.87C94.76 61.41 92.37 60.04 92.37 56.67V29.25C92.37 25.89 94.77 23.16 97.5 23.16H104.91C106.9 23.16 108.42 25.27 108.42 27.85V48.97ZM120.34 26.78C120.34 24.81 119.61 23.21 118.67 23.21H115.33C114.17 23.21 113.17 25.12 113.17 27.46V46.52C113.17 48.86 114.17 50.16 115.33 49.43L118.67 47.39C119.61 46.81 120.34 44.77 120.34 42.8V26.78Z",
+      fill: "#40C0E7"
+    }), /*#__PURE__*/_react.default.createElement("path", {
+      d: "M16.08 100.82C19.8742 100.82 22.95 97.7487 22.95 93.96C22.95 90.1713 19.8742 87.1 16.08 87.1C12.2858 87.1 9.20999 90.1713 9.20999 93.96C9.20999 97.7487 12.2858 100.82 16.08 100.82Z",
+      fill: "white"
+    }), /*#__PURE__*/_react.default.createElement("path", {
+      d: "M79.13 93.96C79.13 97.75 76.05 100.82 72.25 100.82C68.47 100.82 65.39 97.75 65.39 93.96C65.39 90.16 68.46 87.1 72.25 87.1C76.05 87.1 79.13 90.16 79.13 93.96Z",
+      fill: "white"
+    }), /*#__PURE__*/_react.default.createElement("path", {
+      d: "M102.02 104.14C102.02 111.99 99.25 118.36 95.85 118.36C92.44 118.36 89.67 111.99 89.67 104.14C89.67 96.28 92.44 89.91 95.85 89.91C99.25 89.92 102.02 96.28 102.02 104.14Z",
+      fill: "#2F2F2F"
+    }), /*#__PURE__*/_react.default.createElement("path", {
+      d: "M125.46 87.29C125.46 94.64 123.41 100.59 120.88 100.59C118.35 100.59 116.3 94.64 116.3 87.29C116.3 79.94 118.35 73.98 120.88 73.98C123.42 73.98 125.46 79.95 125.46 87.29Z",
+      fill: "#2F2F2F"
+    })), /*#__PURE__*/_react.default.createElement("defs", null, /*#__PURE__*/_react.default.createElement("clipPath", {
+      id: "clip0"
+    }, /*#__PURE__*/_react.default.createElement("rect", {
+      width: "128",
+      height: "128",
+      fill: "white"
+    }))))), /*#__PURE__*/_react.default.createElement(_components.UserAccount.Wrapper, null, /*#__PURE__*/_react.default.createElement(_components.UserAccount.Text, null, cart.destination), /*#__PURE__*/_react.default.createElement(_components.UserAccount.Text, null, fullDate, ", ", hours, ": ", minutes)), /*#__PURE__*/_react.default.createElement(_components.UserAccount.Wrapper, null, /*#__PURE__*/_react.default.createElement(_components.UserAccount.Text, null, cartItems.length !== 0 && /*#__PURE__*/_react.default.createElement("span", null, cartItems.length, " ", cartItems.length > 1 ? /*#__PURE__*/_react.default.createElement("span", null, "seats") : /*#__PURE__*/_react.default.createElement("span", null, "seat"))), /*#__PURE__*/_react.default.createElement(_components.UserAccount.Text, null, cart.price, " Ar")), /*#__PURE__*/_react.default.createElement(_components.UserAccount.Buttons, {
+      disabled: cartItems.length === 0 ? true : false
+    }, "Cancel"));
+  })))));
+}
+
+var _default = (0, _reactRedux.connect)(state => ({
+  cartItems: state.cartItems
+}))(userAccountContainer);
+
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-redux":"node_modules/react-redux/es/index.js","../components":"components/index.js","../containers/form":"containers/form.js"}],"pages/home.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -39604,7 +40138,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _cityItems = _interopRequireDefault(require("../containers/cityItems"));
 
-var _trips = _interopRequireDefault(require("../containers/trips"));
+var _departureTimeDetails = _interopRequireDefault(require("../containers/departureTimeDetails"));
 
 var _city = _interopRequireDefault(require("../containers/city"));
 
@@ -39629,9 +40163,9 @@ function home({
   }, /*#__PURE__*/_react.default.createElement(_cityItems.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/cityItemsContainer/:destination"
-  }, /*#__PURE__*/_react.default.createElement(_trips.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+  }, /*#__PURE__*/_react.default.createElement(_departureTimeDetails.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     exact: true,
-    path: "/tripsContainer/:tripsId"
+    path: "/departureTimeDetailsContainer/:tripsId"
   }, /*#__PURE__*/_react.default.createElement(_city.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/userAccount"
@@ -39647,7 +40181,7 @@ function mapStateToProps(state) {
 var _default = (0, _reactRedux.connect)(mapStateToProps)(home);
 
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../containers/cityItems":"containers/cityItems.js","../containers/trips":"containers/trips.js","../containers/city":"containers/city.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","react-redux":"node_modules/react-redux/es/index.js","../containers/modal":"containers/modal.js","../containers/header":"containers/header.js","../containers/userAccount":"containers/userAccount.js"}],"GlobalStyles.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../containers/cityItems":"containers/cityItems.js","../containers/departureTimeDetails":"containers/departureTimeDetails.js","../containers/city":"containers/city.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","react-redux":"node_modules/react-redux/es/index.js","../containers/modal":"containers/modal.js","../containers/header":"containers/header.js","../containers/userAccount":"containers/userAccount.js"}],"GlobalStyles.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -39742,23 +40276,59 @@ exports.default = _default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.updatedSeat = updatedSeat;
 exports.reducers = void 0;
 
 var _redux = require("redux");
 
 const cityInitialisation = ['Antananarivo', 'Toamasina', 'Vatomandry', 'Moramanga'];
+const userData = [{
+  'id': 5,
+  "destination": "Moramanga",
+  "departureTime": 1613397600,
+  "driverName": "Tom Cruise",
+  "driverContact": "034585514",
+  "estimatedDuration": "12h",
+  "breaks": "2",
+  "price": 50000,
+  "seats": [{
+    "id": 0,
+    "isAvailable": true,
+    "passengerFirstName": "",
+    "passengerLastName": "",
+    "passengerPhoneNumber": "",
+    "extraLuggage": false
+  }, {
+    "id": 1,
+    "isAvailable": true,
+    "passengerFirstName": "",
+    "passengerLastName": "",
+    "passengerPhoneNumber": "",
+    "extraLuggage": false
+  }]
+}];
+const user = {
+  id: 0,
+  isAvailable: true,
+  passengerFirstName: "Roseline",
+  passengerLastName: "Prisca",
+  passengerPhoneNumber: '0348479051',
+  extraLuggage: false
+}; // Get the destination data from API
 
 function city(state = [], action) {
-  console.log(state);
-
   switch (action.type) {
     case 'GET_CITY':
       return action.value;
 
+    case 'UPDATE_SEAT':
+      return [...state, action.value];
+
     default:
       return state;
   }
-}
+} // Get the destination list from initialisedData
+
 
 function destination(state = cityInitialisation, action) {
   switch (action.type) {
@@ -39768,11 +40338,10 @@ function destination(state = cityInitialisation, action) {
     default:
       return state;
   }
-}
+} // Take a new booked seat data
 
-function cartItems(state = [], action) {
-  console.log('sate', state);
 
+function cartItems(state = userData, action) {
   switch (action.type) {
     case 'SET_CART_ITEMS':
       return [...state, action.value];
@@ -39783,7 +40352,8 @@ function cartItems(state = [], action) {
     default:
       return state;
   }
-}
+} // Calculte the total saet data
+
 
 function totalPrice(state = 0, action) {
   switch (action.type) {
@@ -39793,7 +40363,8 @@ function totalPrice(state = 0, action) {
     default:
       return state;
   }
-}
+} // Toggle modal
+
 
 function Modal(state = false, action) {
   switch (action.type) {
@@ -39803,14 +40374,39 @@ function Modal(state = false, action) {
     default:
       return state;
   }
-}
+} // Update the seat data
+
+
+function updatedSeat(state = user, action) {
+  switch (action.type) {
+    case 'SET_FISRTNAME':
+      return { ...state,
+        passengerFirstName: action.value
+      };
+
+    case 'SET_LASTNAME':
+      return { ...state,
+        passengerLastName: action.value
+      };
+
+    case 'SET_NUMBER':
+      return { ...state,
+        passengerPhoneNumber: action.value
+      };
+
+    default:
+      return state;
+  }
+} // Combine all of the reducers
+
 
 const reducers = (0, _redux.combineReducers)({
   city,
   destination,
   totalPrice,
   cartItems,
-  Modal
+  Modal,
+  updatedSeat
 });
 exports.reducers = reducers;
 },{"redux":"node_modules/redux/es/redux.js"}],"store.js":[function(require,module,exports) {
@@ -39885,7 +40481,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55467" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55476" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

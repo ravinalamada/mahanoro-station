@@ -35,7 +35,7 @@ function TripsContainer({city, getCity}) {
           var dayName = days[day.getDay() + i]
 
           // Get Full Date
-          var fullDate = new Date(1613480400).toLocaleDateString("en-US");
+          var fullDate = day.toLocaleDateString("en-US");
           return (
           <Trips key={city.id}>
           <Trips.Frame>

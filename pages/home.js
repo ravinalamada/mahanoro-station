@@ -1,6 +1,6 @@
 import React from 'react';
 import CityItemsContainer from '../containers/cityItems';
-import TripsContainer from '../containers/trips';
+import DepartureTimeDetailsContainer from '../containers/departureTimeDetails';
 import CityContainer from '../containers/city';
 import { Switch, Route, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -17,9 +17,9 @@ function home({Modal}) {
           <CityItemsContainer></CityItemsContainer>
         </Route>
         <Route exact path='/cityItemsContainer/:destination'>
-          <TripsContainer />
+          <DepartureTimeDetailsContainer />
         </Route>
-        <Route exact path='/tripsContainer/:tripsId'>
+        <Route exact path='/departureTimeDetailsContainer/:tripsId'>
           <CityContainer />
         </Route>
         <Route exact path='/userAccount'>

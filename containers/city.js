@@ -70,7 +70,7 @@ function CityContainer({city, getCity, addToCart, displayModal,removeCartItems, 
           return (
             <City.RedBgButtons key={seat.id} onClick={() => addToCart(findCityById)}>
             <svg width="61" height="61" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0)">
+            <g clipPath="url(#clip0)">
             <path d="M51.7413 30.7563C51.9281 32.8112 50.527 34.4924 48.5656 34.4924H12.8864C10.925 34.4924 9.52399 32.8112 9.71079 30.7563L11.6722 10.0213C11.859 7.9665 13.6336 6.28528 15.5951 6.28528H45.857C47.8184 6.28528 49.593 7.9665 49.7798 10.0213L51.7413 30.7563Z" fill="#B4D7EE"/>
             <path d="M9.15039 29.3553H14.7544V36.8274H9.15039V29.3553Z" fill="#3E4347"/>
             <path d="M46.6975 29.3553H52.3016V36.8274H46.6975V29.3553Z" fill="#3E4347"/>
@@ -86,8 +86,8 @@ function CityContainer({city, getCity, addToCart, displayModal,removeCartItems, 
             </g>
             <defs>
             <linearGradient id="paint0_linear" x1="29.8883" y1="0" x2="29.8883" y2="59.7766" gradientUnits="userSpaceOnUse">
-            <stop stop-color="white"/>
-            <stop offset="1" stop-color="white" stop-opacity="0"/>
+            <stop stopColor="white"/>
+            <stop offset="1" stopColor="white" stopOpacity="0"/>
             </linearGradient>
             <clipPath id="clip0">
             <rect width="59.7766" height="59.7766" fill="white" transform="translate(0.837646 0.868019)"/>
@@ -97,7 +97,7 @@ function CityContainer({city, getCity, addToCart, displayModal,removeCartItems, 
 
             </City.RedBgButtons>
             )
-          }if(isAlreadyInCart === true) {
+          }if(seat.isAvailable === false) {
             return (
               <City.Buttons key={seat.id} onClick={() => removeCartItems(findCityById)}>
               <svg xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><path d="M0,0h24v24H0V0z" fill="none" outline="#29ABE2"/></g><g><path d="M15,3H9C7.9,3,7,3.9,7,5v9h10V5C17,3.9,16.1,3,15,3z M18,15H6c-1.1,0-2,0.9-2,2v3c0,0.55,0.45,1,1,1h0c0.55,0,1-0.45,1-1 v-3h12v3c0,0.55,0.45,1,1,1h0c0.55,0,1-0.45,1-1v-3C20,15.9,19.1,15,18,15z M6,11.5C6,12.33,5.33,13,4.5,13S3,12.33,3,11.5 S3.67,10,4.5,10S6,10.67,6,11.5z M21,11.5c0,0.83-0.67,1.5-1.5,1.5S18,12.33,18,11.5s0.67-1.5,1.5-1.5S21,10.67,21,11.5z"/></g></svg>
