@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import {connect} from 'react-redux';
 import {useParams} from 'react-router-dom';
-import {Masthead,City, Buttons} from '../components';
+import {Masthead,DestinationDetails, Buttons} from '../components';
 import {getCity, setTotalPrice, addToCart, removeCartItems, displayModal} from '../actions'
 // import { Buttons } from '../components/trips/styles/trips';
 
-function CityContainer({city, getCity, addToCart, displayModal,removeCartItems, totalPrice, cartItems}) {
+function DestinationDetailsContainer({city, getCity, addToCart, displayModal,removeCartItems, totalPrice, cartItems}) {
   console.log('cart', cartItems);
   const { tripsId } = useParams();
   const [total, setTotal] = useState(0);
@@ -61,14 +61,14 @@ function CityContainer({city, getCity, addToCart, displayModal,removeCartItems, 
     </Masthead.Wrapper>
     </Masthead>
     {
-      <City>
-      <City.Wrapper>
+      <DestinationDetails>
+      <DestinationDetails.Wrapper>
       {seatData && seatData.map(seat => {
         const isAlreadyInCart = cartItems.some(item => item.id === seatId )
         console.log(isAlreadyInCart);
         if(seat.isAvailable === true && isAlreadyInCart === false) {
           return (
-            <City.RedBgButtons key={seat.id} onClick={() => addToCart(findCityById)}>
+            <DestinationDetails.RedBgButtons key={seat.id} onClick={() => addToCart(findCityById)}>
             <svg width="61" height="61" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0)">
             <path d="M51.7413 30.7563C51.9281 32.8112 50.527 34.4924 48.5656 34.4924H12.8864C10.925 34.4924 9.52399 32.8112 9.71079 30.7563L11.6722 10.0213C11.859 7.9665 13.6336 6.28528 15.5951 6.28528H45.857C47.8184 6.28528 49.593 7.9665 49.7798 10.0213L51.7413 30.7563Z" fill="#B4D7EE"/>
@@ -95,51 +95,51 @@ function CityContainer({city, getCity, addToCart, displayModal,removeCartItems, 
             </defs>
             </svg>
 
-            </City.RedBgButtons>
+            </DestinationDetails.RedBgButtons>
             )
           }if(seat.isAvailable === false) {
             return (
-              <City.Buttons key={seat.id} onClick={() => removeCartItems(findCityById)}>
+              <DestinationDetails.Buttons key={seat.id} onClick={() => removeCartItems(findCityById)}>
               <svg xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><path d="M0,0h24v24H0V0z" fill="none" outline="#29ABE2"/></g><g><path d="M15,3H9C7.9,3,7,3.9,7,5v9h10V5C17,3.9,16.1,3,15,3z M18,15H6c-1.1,0-2,0.9-2,2v3c0,0.55,0.45,1,1,1h0c0.55,0,1-0.45,1-1 v-3h12v3c0,0.55,0.45,1,1,1h0c0.55,0,1-0.45,1-1v-3C20,15.9,19.1,15,18,15z M6,11.5C6,12.33,5.33,13,4.5,13S3,12.33,3,11.5 S3.67,10,4.5,10S6,10.67,6,11.5z M21,11.5c0,0.83-0.67,1.5-1.5,1.5S18,12.33,18,11.5s0.67-1.5,1.5-1.5S21,10.67,21,11.5z"/></g></svg>
-              </City.Buttons>
+              </DestinationDetails.Buttons>
               )
             }
           })
         }
-        </City.Wrapper>
-        <City.Wrapper>
-        <City.Frame>
-        <City.DepartureTime><span>Departure time: </span>{hours}:{minutes}</City.DepartureTime>
-        </City.Frame>
-        <City.Frame>
-        <City.Name>Driver: <span>{findCityById && findCityById.driverName}</span></City.Name>
-        </City.Frame>
-        <City.Frame>
-        <City.Contact>
+        </DestinationDetails.Wrapper>
+        <DestinationDetails.Wrapper>
+        <DestinationDetails.Frame>
+        <DestinationDetails.DepartureTime><span>Departure time: </span>{hours}:{minutes}</DestinationDetails.DepartureTime>
+        </DestinationDetails.Frame>
+        <DestinationDetails.Frame>
+        <DestinationDetails.Name>Driver: <span>{findCityById && findCityById.driverName}</span></DestinationDetails.Name>
+        </DestinationDetails.Frame>
+        <DestinationDetails.Frame>
+        <DestinationDetails.Contact>
         Drivers'contact: <span>{findCityById && findCityById.driverContact}</span>
-        </City.Contact>
-        </City.Frame>
-        <City.Frame>
-        <City.EstimatedDuration>Estimated duration: <span>{findCityById && findCityById.estimatedDuration}</span></City.EstimatedDuration>
-        </City.Frame>
-        <City.Frame>
-        <City.Breaks>Breaks: <span>{findCityById && findCityById.breaks}</span></City.Breaks>
-        </City.Frame>
-        <City.Frame>
-        <City.Price>{findCityById && findCityById.price} <span>Ar/seat</span></City.Price>
-        </City.Frame>
-        <City.Frame>
+        </DestinationDetails.Contact>
+        </DestinationDetails.Frame>
+        <DestinationDetails.Frame>
+        <DestinationDetails.EstimatedDuration>Estimated duration: <span>{findCityById && findCityById.estimatedDuration}</span></DestinationDetails.EstimatedDuration>
+        </DestinationDetails.Frame>
+        <DestinationDetails.Frame>
+        <DestinationDetails.Breaks>Breaks: <span>{findCityById && findCityById.breaks}</span></DestinationDetails.Breaks>
+        </DestinationDetails.Frame>
+        <DestinationDetails.Frame>
+        <DestinationDetails.Price>{findCityById && findCityById.price} <span>Ar/seat</span></DestinationDetails.Price>
+        </DestinationDetails.Frame>
+        <DestinationDetails.Frame>
         <Buttons onClick={() => {
           if(displayModal) {
             displayModal(true);
           }
         }}>Book {cartItems.length !== 0 ? <span>{cartItems.length}</span>: null} seats</Buttons>
-        </City.Frame>
-        <City.Frame>
-        <City.Price>{total !== 0 ? <span>Total: {total} Ar</span> : <span>You didn't book any place yet.</span>}</City.Price>
-        </City.Frame>
-        </City.Wrapper>
-        </City>
+        </DestinationDetails.Frame>
+        <DestinationDetails.Frame>
+        <DestinationDetails.Price>{total !== 0 ? <span>Total: {total} Ar</span> : <span>You didn't book any place yet.</span>}</DestinationDetails.Price>
+        </DestinationDetails.Frame>
+        </DestinationDetails.Wrapper>
+        </DestinationDetails>
       }
       </>
       );
@@ -162,4 +162,4 @@ function CityContainer({city, getCity, addToCart, displayModal,removeCartItems, 
     }
 
 
-    export default connect(mapStateToProps, (mapToDispatch))(CityContainer)
+    export default connect(mapStateToProps, (mapToDispatch))(DestinationDetailsContainer)

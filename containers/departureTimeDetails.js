@@ -4,7 +4,7 @@ import { getCity } from '../actions'
 import { useParams, Link } from 'react-router-dom';
 import { Trips, Buttons} from '../components';
 
-function TripsContainer({city, getCity}) {
+function departureTimeDetailsContainer({city, getCity}) {
 
 	const { destination } = useParams();
   const findCityByName = city.find(city => city.destination === destination);
@@ -50,7 +50,7 @@ function TripsContainer({city, getCity}) {
             <Trips.Seats>{availlableSeat.length} seats left</Trips.Seats>
           </Trips.Frame>
           <Trips.Frame>
-            <Link to={`/tripsContainer/${findCityByName && findCityByName.id}`}>
+            <Link to={`/departureTimeDetailsContainer/${findCityByName && findCityByName.id}`}>
               <Buttons>Book a seat</Buttons>
             </Link>
           </Trips.Frame>
@@ -62,4 +62,4 @@ function TripsContainer({city, getCity}) {
 	);
 }
 
-export default connect((state) => ({city: state.city}), ({getCity}))(TripsContainer)
+export default connect((state) => ({city: state.city}), ({getCity}))(departureTimeDetailsContainer)

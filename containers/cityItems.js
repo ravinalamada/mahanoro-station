@@ -44,7 +44,7 @@ function cityItemsContainer({destinations}) {
     <CityList>
     {destinations && destinations.map(destination => (
       <CityItems key={destination}>
-      <Link to={`/cityItemsContainer/${destination}`} >
+      <Link to={`/destinationDetails/${destination}`} >
       <CityItems.Title>{destination}</CityItems.Title>
       <CityItems.Logo>
         <svg width="34" height="36" viewBox="0 0 34 36" fill="none" xmlns="http://www.w3.org/2000/svg">
