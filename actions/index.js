@@ -72,9 +72,28 @@ export function setLastName(thing) {
   }
 }
 
+export function setBookedSeatsAction(thing) {
+  return {
+    type: 'SET_BOOKED_PLACES',
+    value: thing,
+  }
+}
+export function setUsers(thing) {
+  return {
+    type: 'SET_USERS',
+    value: thing,
+  }
+}
+
 export function uptadeSeat(thing) {
   return {
     type: ' UPDATE_SEAT',
+    value: thing,
+  }
+}
+export function bookedSeats(thing) {
+  return {
+    type: 'BOOKED_SEATS',
     value: thing,
   }
 }

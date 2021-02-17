@@ -1,34 +1,14 @@
 import { combineReducers } from 'redux';
 const cityInitialisation = ['Antananarivo', 'Toamasina', 'Vatomandry', 'Moramanga']
-const userData = [
-    {'id': 5,
-    "destination": "Moramanga",
-    "departureTime": 1613397600,
-    "driverName": "Tom Cruise",
-    "driverContact": "034585514",
-    "estimatedDuration": "12h",
-    "breaks": "2",
-    "price": 50000,
-  "seats": [
-    {
-      "id": 0,
-      "isAvailable": true,
-      "passengerFirstName": "",
-      "passengerLastName": "",
-      "passengerPhoneNumber": "",
-      "extraLuggage": false
-    },
-    {
-      "id": 1,
-      "isAvailable": true,
-      "passengerFirstName": "",
-      "passengerLastName": "",
-      "passengerPhoneNumber": "",
-      "extraLuggage": false
-    }]},
-]
 
 const user = {
+  "destination": "Moramanga",
+  "departureTime": 1613397600,
+  "driverName": "Tom Cruise",
+  "driverContact": "034585514",
+  "estimatedDuration": "12h",
+  "breaks": "2",
+  "price": 50000,
   id: 0,
   isAvailable: true,
   passengerFirstName: "Roseline",

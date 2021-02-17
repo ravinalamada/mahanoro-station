@@ -1,17 +1,37 @@
 import React, {useEffect, useState} from 'react';
-import {connect} from 'react-redux';
+import {connect, useSelector, useDispatch} from 'react-redux';
 import {useParams} from 'react-router-dom';
 import {Masthead,DestinationDetails, Buttons} from '../components';
-import {getCity, setTotalPrice, addToCart, removeCartItems, displayModal} from '../actions'
+import {getCity, setUsers, setBookedSeatsAction, bookedSeats, setTotalPrice, addToCart, removeCartItems, displayModal} from '../actions'
 // import { Buttons } from '../components/trips/styles/trips';
 
 function DestinationDetailsContainer({city, getCity, addToCart, displayModal,removeCartItems, totalPrice, cartItems}) {
   console.log('cart', cartItems);
   const { tripsId } = useParams();
   const [total, setTotal] = useState(0);
+  const dispatch = useDispatch()
   const findCityById = city.find(city => city.id == tripsId);
   const seatData = findCityById && findCityById.seats;
-  const seatId = findCityById && findCityById.id
+  const userData = useSelector(state => state.updatedSeat);
+
+  function handleSeats(e) {
+    const imageValue =  e.target.dataset.value;
+    const seats = findCityById?.seats.find(seat => {
+        return seat.id === Number(imageValue)
+    })
+    if (seats) {
+        seats.isAvailable= userData.isSeatAvailabe
+        seats.passengerFirstName= userData.passengerFirstName
+        seats.passengerLastName= userData.passengerLastName
+        seats.passengerPhoneNumber= userData.passengerPhoneNumber
+        userData.price,
+        addToCart(seats)
+    }
+    dispatch(setBookedSeatsAction(seats))
+}
+const findBookedSeats = seatData && seatData.filter(seat => seat.isAvailable === false && seat.passengerFirstName && seat.passengerLastName && seat.passengerPhoneNumber);
+dispatch(bookedSeats(findBookedSeats))
+
 
   useEffect(() => {
     getCity();
@@ -62,50 +82,22 @@ function DestinationDetailsContainer({city, getCity, addToCart, displayModal,rem
     </Masthead>
     {
       <DestinationDetails>
-      <DestinationDetails.Wrapper>
-      {seatData && seatData.map(seat => {
-        const isAlreadyInCart = cartItems.some(item => item.id === seatId )
-        console.log(isAlreadyInCart);
-        if(seat.isAvailable === true && isAlreadyInCart === false) {
-          return (
-            <DestinationDetails.RedBgButtons key={seat.id} onClick={() => addToCart(findCityById)}>
-            <svg width="61" height="61" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clipPath="url(#clip0)">
-            <path d="M51.7413 30.7563C51.9281 32.8112 50.527 34.4924 48.5656 34.4924H12.8864C10.925 34.4924 9.52399 32.8112 9.71079 30.7563L11.6722 10.0213C11.859 7.9665 13.6336 6.28528 15.5951 6.28528H45.857C47.8184 6.28528 49.593 7.9665 49.7798 10.0213L51.7413 30.7563Z" fill="#B4D7EE"/>
-            <path d="M9.15039 29.3553H14.7544V36.8274H9.15039V29.3553Z" fill="#3E4347"/>
-            <path d="M46.6975 29.3553H52.3016V36.8274H46.6975V29.3553Z" fill="#3E4347"/>
-            <path d="M14.4744 48.4091H20.0784V57.8426H14.4744V48.4091Z" fill="#3E4347"/>
-            <path d="M41.3738 48.4091H46.9778V57.8426H41.3738V48.4091Z" fill="#3E4347"/>
-            <path d="M39.5058 24.2183C39.2256 26.6467 37.2642 28.7015 35.3028 28.7015H26.1495C24.0946 28.7015 22.2266 26.7401 21.9464 24.2183L20.2652 10.5817C19.985 8.1533 21.386 6.09848 23.3474 6.09848H38.0114C40.0662 6.09848 41.4672 8.1533 41.0936 10.5817L39.5058 24.2183Z" fill="#428BC1"/>
-            <path d="M22.3198 55.8812C22.133 55.4142 21.5726 54.9472 21.1056 54.9472H13.6336C13.0731 54.9472 12.6061 55.3208 12.4193 55.8812L11.0183 59.7107C10.8315 60.1777 11.1117 60.6447 11.6721 60.6447H22.8803C23.4407 60.6447 23.7209 60.2711 23.5341 59.7107L22.3198 55.8812Z" fill="#94989B"/>
-            <path d="M50.4335 59.7107L49.1259 55.8812C48.9391 55.4142 48.3787 54.9472 47.9116 54.9472H40.4396C39.8792 54.9472 39.4122 55.3208 39.2254 55.8812L37.9177 59.7107C37.7309 60.1777 38.0111 60.6447 38.5715 60.6447H49.7797C50.2467 60.6447 50.5269 60.2711 50.4335 59.7107Z" fill="#94989B"/>
-            <path d="M43.9889 6.47208C43.9889 8.5269 42.4011 10.2081 40.4397 10.2081H20.9189C18.9574 10.2081 17.3696 8.5269 17.3696 6.47208V4.60406C17.3696 2.54924 18.9574 0.868019 20.9189 0.868019H40.4397C42.4011 0.868019 43.9889 2.54924 43.9889 4.60406V6.47208Z" fill="#29ABE2"/>
-            <path d="M15.3149 28.1411L15.0347 26.1797C14.8479 25.1523 14.0072 24.3117 13.0732 24.3117H10.5514C9.61739 24.3117 8.77679 25.1523 8.58998 26.1797L8.30978 28.1411C8.12298 29.1685 8.77679 30.0091 9.7108 30.0091H13.9138C14.8479 30.0091 15.5017 29.1685 15.3149 28.1411Z" fill="#29ABE2"/>
-            <path d="M52.9555 28.1411L52.6753 26.1797C52.4885 25.1523 51.6479 24.3117 50.7139 24.3117H48.192C47.258 24.3117 46.4174 25.1523 46.2306 26.1797L45.9504 28.1411C45.7636 29.1685 46.4174 30.0091 47.3514 30.0091H51.5545C52.4885 30.0091 53.0489 29.1685 52.9555 28.1411Z" fill="#29ABE2"/>
-            <path d="M48.9392 34.4924H12.5128C9.61734 34.4924 7.84272 37.2944 8.40312 40.7503L8.77673 43.1787C9.33713 46.6345 12.2326 49.4365 15.0346 49.4365H46.2305C49.126 49.4365 51.928 46.6345 52.4884 43.1787L52.9554 40.7503C53.6092 37.3878 51.7412 34.4924 48.9392 34.4924Z" fill="#29ABE2"/>
-            </g>
-            <defs>
-            <linearGradient id="paint0_linear" x1="29.8883" y1="0" x2="29.8883" y2="59.7766" gradientUnits="userSpaceOnUse">
-            <stop stopColor="white"/>
-            <stop offset="1" stopColor="white" stopOpacity="0"/>
-            </linearGradient>
-            <clipPath id="clip0">
-            <rect width="59.7766" height="59.7766" fill="white" transform="translate(0.837646 0.868019)"/>
-            </clipPath>
-            </defs>
-            </svg>
-
-            </DestinationDetails.RedBgButtons>
-            )
-          }if(seat.isAvailable === false) {
+       <DestinationDetails.Wrapper>
+         {
+           seatData && seatData.map(seat => {
             return (
-              <DestinationDetails.Buttons key={seat.id} onClick={() => removeCartItems(findCityById)}>
-              <svg xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><path d="M0,0h24v24H0V0z" fill="none" outline="#29ABE2"/></g><g><path d="M15,3H9C7.9,3,7,3.9,7,5v9h10V5C17,3.9,16.1,3,15,3z M18,15H6c-1.1,0-2,0.9-2,2v3c0,0.55,0.45,1,1,1h0c0.55,0,1-0.45,1-1 v-3h12v3c0,0.55,0.45,1,1,1h0c0.55,0,1-0.45,1-1v-3C20,15.9,19.1,15,18,15z M6,11.5C6,12.33,5.33,13,4.5,13S3,12.33,3,11.5 S3.67,10,4.5,10S6,10.67,6,11.5z M21,11.5c0,0.83-0.67,1.5-1.5,1.5S18,12.33,18,11.5s0.67-1.5,1.5-1.5S21,10.67,21,11.5z"/></g></svg>
-              </DestinationDetails.Buttons>
-              )
-            }
-          })
-        }
+                seat.isAvailable  && seat.passengerFirstName==='' && seat.passengerLastName==='' ?
+                  <DestinationDetails.RedBgButtons onClick={handleSeats} data-value={seat.id}>
+                    logo
+                  </DestinationDetails.RedBgButtons>
+                :
+                !seat.isAvailable  && seat.passengerFirstName && seat.passengerLastName ?
+                    <DestinationDetails.Buttons>logo</DestinationDetails.Buttons> :
+                !seat.isAvailable &&
+                <img src='' />
+            )
+        })
+         }
         </DestinationDetails.Wrapper>
         <DestinationDetails.Wrapper>
         <DestinationDetails.Frame>
